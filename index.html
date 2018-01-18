@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta charset="utf-8">
+    <meta name= "viewport" content = "width=device-width, initial-scale = 1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <title>Icon Table Generator by chlorophylls</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    
+<body>
+    <div class="container-fluid bg-1 text-center">
+        <h1>Icon Table Generator</h1>
+        
+        <p><small>by <a href="http://chlorophylls.dreamwidth.org/profile">chlor</a></small></p>
+        <p>Instantly generate HTML you can copy and paste to display your graphics in a nice, neat, numbered table.</p>
+    </div>
+
+    <div class="container-fluid"> 
+        <div class="row">
+
+            <!-- Add section -->
+            <div class="col-sm-6">
+                    <center><h2>Add image links</h2></center>
+
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Appended Input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="singleImageURL">Add images 1-by-1</label>
+  <div class="col-md-8">
+    <div class="input-group">
+      <input id="singleImageURL" name="singleImageURL" class="form-control" placeholder="Image URL" type="text">
+      <span class="input-group-addon">+</span>
+    </div>
+    
+  </div>
+</div>
+<!-- Textarea -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="multipleImageURLs">Add multiple images</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="multipleImageURLs" name="multipleImageURLs">Add multiple image links here. SEPARATE YOUR LINKS WITH SEMICOLONS (;)</textarea>
+  </div>
+</div>
+
+<!-- Appended Input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="appendedtext">Add from Imgur album</label>
+  <div class="col-md-8">
+    <div class="input-group">
+      <input id="appendedtext" name="appendedtext" class="form-control" placeholder="URL to Imgur album" type="text">
+      <span class="input-group-addon">+</span>
+    </div>
+    <p class="help-block">help</p>
+  </div>
+</div>
+<!-- Select Multiple -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="currentImageURLs">All images currently added</label>
+  <div class="col-md-8">
+    <select id="currentImageURLs" name="currentImageURLs" class="form-control" multiple="multiple">
+      <option value="1">Option one</option>
+      <option value="2">Option two</option>
+    </select>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+            </div>
+
+            <!-- Customize section -->    
+            <div class="col-sm-6">
+            <center><h2>Customize</h2></center>
+            
+            <div class="row">
+                    
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend><h4>Table styling</h4></legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="tableBGColor">Table background color</label>  
+  <div class="col-md-5">
+  <input id="tableBGColor" name="tableBGColor" type="text" placeholder="Enter hex code (e.g. #000000)" class="form-control input-md">
+  <span class="help-block">help</span>  
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="selectbasic">Images per row</label>
+  <div class="col-md-2">
+    <select id="selectbasic" name="selectbasic" class="form-control">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+    </select>
+  </div>
+</div>
+
+<!-- Multiple Radios -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="tableAlignment">Table alignment</label>
+  <div class="col-md-4">
+  <div class="radio">
+    <label for="tableAlignment-0">
+      <input type="radio" name="tableAlignment" id="tableAlignment-0" value="center" checked="checked">
+      Center
+    </label>
+	</div>
+  <div class="radio">
+    <label for="tableAlignment-1">
+      <input type="radio" name="tableAlignment" id="tableAlignment-1" value="left">
+      Left
+    </label>
+	</div>
+  <div class="radio">
+    <label for="tableAlignment-2">
+      <input type="radio" name="tableAlignment" id="tableAlignment-2" value="right">
+      Right
+    </label>
+	</div>
+  </div>
+</div>
+
+</fieldset>
+</form>
+                
+                    
+<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend><h4>Cell styling</h4></legend>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="cellBGColor">Cell background color</label>  
+  <div class="col-md-5">
+  <input id="cellBGColor" name="cellBGColor" type="text" placeholder="Enter hex code (e.g. #000000)" class="form-control input-md">
+  <span class="help-block">help</span>  
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="optionalPrefix">Text before number (optional)</label>  
+  <div class="col-md-5">
+  <input id="optionalPrefix" name="optionalPrefix" type="text" placeholder="E.g. Picture, Icon, #, etc." class="form-control input-md">
+  <span class="help-block">help</span>  
+  </div>
+</div>
+
+<!-- Multiple Radios -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="numberPosition">Number position</label>
+  <div class="col-md-4">
+  <div class="radio">
+    <label for="numberPosition-0">
+      <input type="radio" name="numberPosition" id="numberPosition-0" value="none" checked="checked">
+      No numbers
+    </label>
+	</div>
+  <div class="radio">
+    <label for="numberPosition-1">
+      <input type="radio" name="numberPosition" id="numberPosition-1" value="above">
+      Above icon
+    </label>
+	</div>
+  <div class="radio">
+    <label for="numberPosition-2">
+      <input type="radio" name="numberPosition" id="numberPosition-2" value="under">
+      Under icon
+    </label>
+	</div>
+  <div class="radio">
+    <label for="numberPosition-3">
+      <input type="radio" name="numberPosition" id="numberPosition-3" value="left">
+      Left of icon
+    </label>
+	</div>
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="selectbasic">Number font size</label>
+  <div class="col-md-4">
+    <select id="selectbasic" name="selectbasic" class="form-control">
+      <option value="small">Small</option>
+      <option value="normal">Normal</option>
+      <option value="big">Big</option>
+    </select>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="numberColor">Number color</label>  
+  <div class="col-md-5">
+  <input id="numberColor" name="numberColor" type="text" placeholder="Enter hex code (e.g. #000000)" class="form-control input-md">
+  <span class="help-block">help</span>  
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="startingNumber">Number to start from</label>  
+  <div class="col-md-4">
+  <input id="startingNumber" name="startingNumber" type="text" placeholder="Enter # to start from" class="form-control input-md">
+  <span class="help-block">help</span>  
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+                    
+                </div>
+            </div>
+            </div>
+        </div>
+
+    
+    <h2>Live preview</h2>
+    <p>Total icon count: (put this in Add image links section instead)</p>
+    
+    <h2>Copy & paste</h2>
+      <center>
+        <button type="button" class="btn">Copy code to clipboard</button> <br><br>
+        <textarea rows="10" cols="100">
+            At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
+        </textarea>
+      </center>
+</body>
+    
+</html>
