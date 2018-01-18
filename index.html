@@ -23,17 +23,19 @@
         <p>Instantly generate HTML you can copy and paste to display your graphics in a nice, neat, numbered table.</p>
     </div>
 
-    <div class="container-fluid"> 
-        <div class="row">
+<div class="container-fluid bg-1 text-center">
+  <h2>Upload</h2>
+</div>
+  
+<div class="container-fluid"> 
+  <div class="row">
 
-            <!-- Add section -->
-            <div class="col-sm-6">
-                    <center><h2>Add image links</h2></center>
+  <!-- ADD IMAGE LINKS section -->
+    <div class="col-sm-6">
 
 <form class="form-horizontal">
 <fieldset>
-
-<!-- ADD IMAGES 1-BY-1 section -->  
+<!-- Add images 1-by-1 input field -->  
 <label class="control-label" for="singleImageURL">Add images 1-by-1</label>
 <div class="input-group">
   <input type="text" 
@@ -46,7 +48,7 @@
     </span>
 </div>
   
-<!-- ADD MULTIPLE IMAGES section -->
+<!-- Add multiple images input field -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="multipleImageURLs">Add multiple images</label>
   <div class="col-md-4">                     
@@ -58,7 +60,7 @@
   </div>
 </div>
 
-<!-- ADD FROM IMGUR ALBUM section -->
+<!-- Add from Imgur album input field -->
 <label class="control-label" for="imgurAlbumURL">Add from Imgur album</label>
 <div class="input-group">
    <input type="text" 
@@ -72,49 +74,53 @@
       </span>
 </div>
 <p class="help-block">help</p>
-  
-<!-- ALL IMAGES CURRENTLY ADDED section -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="currentImageURLs">All images currently added</label>
-  <div class="col-md-8">
-    <select id="currentImageURLs" name="currentImageURLs" class="form-control" multiple="multiple">
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>
-    </select>
-  </div>
-</div>
 
 </fieldset>
 </form>
-
-            </div>
-
-            <!-- Customize section -->    
-            <div class="col-sm-6">
-            <center><h2>Customize</h2></center>
-            
-            <div class="row">
-                    
-<form class="form-horizontal">
-<fieldset>
-
-<!-- Form Name -->
-<legend><h4>Table styling</h4></legend>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="tableBGColor">Table background color</label>  
-  <div class="col-md-5">
-  <input id="tableBGColor" name="tableBGColor" type="text" placeholder="Enter hex code (e.g. #000000)" class="form-control input-md">
-  <span class="help-block">help</span>  
-  </div>
 </div>
 
-<!-- Select Basic -->
+<!-- ALL IMAGES CURRENTLY ADDED section -->
+<div class="col-sm-6">
+  <div class="form-group">
+    <label class="control-label" for="currentImageURLs">All images currently added</label>
+
+      <select id="currentImageURLs" name="currentImageURLs" class="form-control" multiple="multiple">
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+        <option value="3">Option 3</option>
+      </select>    
+  </div>  
+  <p>Total icon count:</p>
+</div>
+    
+</div>
+  
+<!-- CUSTOMIZE section -->
+<div class="container-fluid bg-1 text-center">
+  <h2>Customize</h2>
+</div>
+
+<!-- Table styling section -->
+<div class="col-sm-6">
+    <form class="form-horizontal">
+    <fieldset>
+
+    <legend><h4>Table styling</h4></legend>
+
+<!-- Table background color section -->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="selectbasic">Images per row</label>
-  <div class="col-md-2">
+  <label class="control-label" for="tableBGColor">Table background color</label>  
+    <input id="tableBGColor" 
+      name="tableBGColor" 
+      type="text" 
+      placeholder="Enter hex code (e.g. #000000)" 
+      class="form-control input-md">
+  <span class="help-block">help</span>  
+</div>
+      
+<!-- Images per row section -->
+<div class="form-group">
+  <label class="control-label" for="selectbasic">Images per row</label>
     <select id="selectbasic" name="selectbasic" class="form-control">
       <option value="1">1</option>
       <option value="2">2</option>
@@ -124,10 +130,9 @@
       <option value="6">6</option>
       <option value="7">7</option>
     </select>
-  </div>
 </div>
 
-<!-- Multiple Radios -->
+<!-- Table alignment section -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="tableAlignment">Table alignment</label>
   <div class="col-md-4">
@@ -154,12 +159,10 @@
 
 </fieldset>
 </form>
-                
-                    
-<form class="form-horizontal">
-<fieldset>
-
-<!-- Form Name -->
+</div>
+</div>
+  
+<div class="col-sm-6"><!-- Form Name -->
 <legend><h4>Cell styling</h4></legend>
 
 <!-- Text input-->
@@ -248,19 +251,23 @@
                 </div>
             </div>
             </div>
-        </div>
+        </div></div>
 
-    
-    <h2>Live preview</h2>
-    <p>Total icon count: (put this in Add image links section instead)</p>
-    
-    <h2>Get your code</h2>
-      <center>
-        <button type="button" class="btn"><span class="glyphicon glyphicon-copy"></span> Copy to clipboard</button> <br><br>
-        <textarea rows="10" cols="100">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id mauris vitae turpis commodo suscipit ac in velit. Integer volutpat, nisi sed lobortis vehicula, nibh felis laoreet magna, ut cursus lectus libero eget sapien. Donec in sapien pharetra, sagittis urna eu, fermentum purus. Suspendisse potenti. Quisque vel fermentum augue. Nunc pulvinar tellus eu mauris pellentesque laoreet non eu lectus. Nunc consequat sit amet diam eu imperdiet. Vivamus posuere, quam nec viverra semper, justo urna eleifend turpis, ac sodales enim tellus vitae neque. Proin et tortor erat. Ut nec dapibus magna. In id commodo dolor.
-        </textarea>
-      </center>
+<!-- LIVE PREVIEW section -->  
+<div class="container-fluid bg-1 text-center">
+  <h2>Live preview</h2>
+</div>
 
+<!-- GET YOUR CODE section -->
+<div class="container-fluid bg-1">
+    <center>
+      <h2>Get your code</h2>
+      <button type="button" class="btn">
+        <span class="glyphicon glyphicon-copy"></span> Copy to clipboard
+      </button> <br><br>
+      <textarea rows="10" cols="100">PLACEHOLDER PLACEHOLDER PLACEHOLDER</textarea>
+    </center>
+</div>
+  
 </body>  
-
 </html>
