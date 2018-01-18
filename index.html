@@ -22,244 +22,177 @@
       
         <p>Instantly generate HTML you can copy and paste to display your graphics in a nice, neat, numbered table.</p>
     </div>
-
-<div class="container-fluid bg-1 text-center">
-  <h2>Upload</h2>
-</div>
   
-<div class="container-fluid"> 
-  <div class="row">
-
-  <!-- ADD IMAGE LINKS section -->
-    <div class="col-sm-6">
-
-<form class="form-horizontal">
-<fieldset>
-<!-- Add images 1-by-1 input field -->  
-<label class="control-label" for="singleImageURL">Add images 1-by-1</label>
-<div class="input-group">
-  <input type="text" 
-  class="form-control"
-  name="singleImageURL">
-    <span class="input-group-btn">
-      <button class="btn btn-default" type="button">
-        <span class="glyphicon glyphicon-plus"></span> Add link
-      </button>
-    </span>
-</div>
-  
-<!-- Add multiple images input field -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="multipleImageURLs">Add multiple images</label>
-  <div class="col-md-4">                     
-    <textarea class="form-control" 
-    id="multipleImageURLs" 
-    name="multipleImageURLs" 
-    style="min-width: 100%">Add multiple image links here. SEPARATE YOUR LINKS WITH SEMICOLONS (;)
-    </textarea>
-  </div>
-</div>
-
-<!-- Add from Imgur album input field -->
-<label class="control-label" for="imgurAlbumURL">Add from Imgur album</label>
-<div class="input-group">
-   <input type="text" 
-    class="form-control" 
-    placeholder="Link to Imgur album"
-    name="imgurAlbumURL">
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="button">
-          <span class="glyphicon glyphicon-plus"></span> Add album link
-        </button>
-      </span>
-</div>
-<p class="help-block">help</p>
-
-</fieldset>
-</form>
-</div>
-
-<!-- ALL IMAGES CURRENTLY ADDED section -->
-<div class="col-sm-6">
-  <div class="form-group">
-    <label class="control-label" for="currentImageURLs">All images currently added</label>
-
-      <select id="currentImageURLs" name="currentImageURLs" class="form-control" multiple="multiple">
-        <option value="1">Option 1</option>
-        <option value="2">Option 2</option>
-        <option value="3">Option 3</option>
-      </select>    
-  </div>  
-  <p>Total icon count:</p>
-</div>
-    
-</div>
-  
-<!-- CUSTOMIZE section -->
-<div class="container-fluid bg-1 text-center">
-  <h2>Customize</h2>
-</div>
-
-<!-- Table styling section -->
-<div class="col-sm-6">
-    <form class="form-horizontal">
-    <fieldset>
-
-    <legend><h4>Table styling</h4></legend>
-
-<!-- Table background color section -->
-<div class="form-group">
-  <label class="control-label" for="tableBGColor">Table background color</label>  
-    <input id="tableBGColor" 
-      name="tableBGColor" 
-      type="text" 
-      placeholder="Enter hex code (e.g. #000000)" 
-      class="form-control input-md">
-  <span class="help-block">help</span>  
-</div>
+<!-- START OF UPLOAD SECTION -->
+<div class="container">
+    <div class="row Upload">
+      <center><h2>Upload <span class="glyphicon glyphicon-upload"></span></h2></center>
       
-<!-- Images per row section -->
-<div class="form-group">
-  <label class="control-label" for="selectbasic">Images per row</label>
-    <select id="selectbasic" name="selectbasic" class="form-control">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-    </select>
-</div>
+      <!-- ADD IMAGE LINKS SECTION -->
+      <div class="col-sm-6">
+        <legend>Add image links</legend>
 
-<!-- Table alignment section -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="tableAlignment">Table alignment</label>
-  <div class="col-md-4">
-  <div class="radio">
-    <label for="tableAlignment-0">
-      <input type="radio" name="tableAlignment" id="tableAlignment-0" value="center" checked="checked">
-      Center
-    </label>
-	</div>
-  <div class="radio">
-    <label for="tableAlignment-1">
-      <input type="radio" name="tableAlignment" id="tableAlignment-1" value="left">
-      Left
-    </label>
-	</div>
-  <div class="radio">
-    <label for="tableAlignment-2">
-      <input type="radio" name="tableAlignment" id="tableAlignment-2" value="right">
-      Right
-    </label>
-	</div>
-  </div>
-</div>
-
-</fieldset>
-</form>
-</div>
+        <!-- Add images 1-by-1 input field --> 
+        <label class="control-label" for="singleImageURL">Add images 1-by-1</label>
+        
+        <div class="input-group">
+          <input type="text" class="form-control" name="singleImageURL">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">
+                <span class="glyphicon glyphicon-plus"></span> Add link
+              </button>
+            </span>
+        </div>
+        
+      <!-- Add from Imgur album input field -->
+      <label class="control-label" for="imgurAlbumURL">Add from Imgur album</label>
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Link to Imgur album" name="imgurAlbumURL">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">
+              <span class="glyphicon glyphicon-plus"></span> Add album link
+              </button>
+            </span>
+        </div>
+        
+        <!-- Add multiple images input field -->
+        <label class="control-label" for="multipleImageURLs">Add multiple images</label>
+          <div class="col">                     
+            <textarea class="form-control" id="multipleImageURLs" name="multipleImageURLs" style="min-width: 80%" placeholder="Add multiple image links here.">
+            </textarea>
+          </div>
+        <p class="help-block">help</p>
+      </div>
+      
+      <!-- CURRENT IMAGES SECTION -->
+      <div class="col-sm-6">
+        <legend>Current images</legend>
+        
+        <label class="control-label" for="currentImageURLs">All images currently added</label>
+          <select id="currentImageURLs" name="currentImageURLs" class="form-control" multiple="multiple">
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>    
+      <p>Total icon count:</p>
+      </div>
+      
+<!-- END OF UPLOAD SECTION -->
 </div>
   
-<div class="col-sm-6"><!-- Form Name -->
-<legend><h4>Cell styling</h4></legend>
+<!-- START OF CUSTOMIZE SECTION -->
+<div class="row Customize">
+  <center><h2>Customize <span class="glyphicon glyphicon-pencil"></span></h2></center>
+  
+  <!-- TABLE STYLING section -->
+  <div class="col-sm-6">
+    <legend>Table styling</legend>
+    
+    <!-- Table background color input field -->
+    <label class="control-label" for="tableBGColor">Table background color</label>  
+      <input id="tableBGColor" name="tableBGColor" type="text" placeholder="Enter hex code (e.g. #000000)" class="form-control input-md">
 
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="cellBGColor">Cell background color</label>  
-  <div class="col-md-5">
-  <input id="cellBGColor" name="cellBGColor" type="text" placeholder="Enter hex code (e.g. #000000)" class="form-control input-md">
-  <span class="help-block">help</span>  
+    <!-- Images per row input dropdown menu -->
+    <label class="control-label" for="selectbasic">Images per row</label>
+        <select id="selectbasic" name="selectbasic" class="form-control">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+        </select>
+    
+    <!-- Table alignment radio buttons -->
+    <div class="form-group">
+    <label class="control-label" for="tableAlignment">Table alignment</label>
+
+    <div class="radio">
+      <label for="tableAlignment-0">
+        <input type="radio" name="tableAlignment" id="tableAlignment-0" value="center" checked="checked">
+        Center
+      </label>
+    </div>
+    <div class="radio">
+      <label for="tableAlignment-1">
+        <input type="radio" name="tableAlignment" id="tableAlignment-1" value="left">
+        Left
+      </label>
+    </div>
+    <div class="radio">
+      <label for="tableAlignment-2">
+        <input type="radio" name="tableAlignment" id="tableAlignment-2" value="right">
+        Right
+      </label>
+    </div>
+      
+<!-- END OF TABLE STYLING SECTION -->    
   </div>
 </div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="optionalPrefix">Text before number (optional)</label>  
-  <div class="col-md-5">
-  <input id="optionalPrefix" name="optionalPrefix" type="text" placeholder="E.g. Picture, Icon, #, etc." class="form-control input-md">
-  <span class="help-block">help</span>  
+  
+  <!-- CELL STYLING section -->
+  <div class="col-sm-6">
+  <legend>Cell styling</legend>
+    
+    <!-- Cell background color input field -->
+    <label class="control-label" for="cellBGColor">Cell background color</label>  
+      <input id="cellBGColor" name="cellBGColor" type="text" placeholder="Enter hex code (e.g. #000000)" class="form-control input-md">  
+ 
+    <!-- Text before number input field -->
+    <label class="control-label" for="optionalPrefix">Text before number (optional)</label>  
+      <input id="optionalPrefix" name="optionalPrefix" type="text" placeholder="E.g. Picture, Icon, #, etc." class="form-control input-md">
+    
+    <!-- Number to start from input field -->
+    <label class="control-label" for="startingNumber">Number to start from</label>
+      <input id="startingNumber" name="startingNumber" type="text" placeholder="Enter # to start from" class="form-control input-md">
+    
+    <!-- Number position radio buttons -->
+    <label class="control-label" for="numberPosition">Number position</label>
+    
+      <div class="radio">
+        <input type="radio" name="numberPosition" id="numberPosition-0" value="none" checked="checked"> No numbers
+	  </div>
+    
+      <div class="radio">
+        <input type="radio" name="numberPosition" id="numberPosition-1" value="above"> Above icon
+      </div>
+    
+      <div class="radio">
+        <input type="radio" name="numberPosition" id="numberPosition-2" value="under"> Under icon
+	  </div>
+    
+      <div class="radio">
+        <input type="radio" name="numberPosition" id="numberPosition-3" value="left"> Left of icon
+      </div>
+    
+      <!-- Number font size dropdown menu -->
+    <label class="col-md-4 control-label" for="selectbasic">Number font size</label>
+    
+      <select id="selectbasic" name="selectbasic" class="form-control">
+        <option value="small">Small</option>
+        <option value="normal">Normal</option>
+        <option value="big">Big</option>
+      </select>
+    
+    <!-- Number color input field -->
+    <label class="col-md-4 control-label" for="numberColor">Number color</label>  
+      <input id="numberColor" name="numberColor" type="text" placeholder="Enter hex code (e.g. #000000)" class="form-control input-md">
+  
+  <!-- END of CELL STYLING section -->  
   </div>
+
+<!-- END of CUSTOMIZE section -->  
 </div>
-
-<!-- Multiple Radios -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="numberPosition">Number position</label>
-  <div class="col-md-4">
-  <div class="radio">
-    <label for="numberPosition-0">
-      <input type="radio" name="numberPosition" id="numberPosition-0" value="none" checked="checked">
-      No numbers
-    </label>
-	</div>
-  <div class="radio">
-    <label for="numberPosition-1">
-      <input type="radio" name="numberPosition" id="numberPosition-1" value="above">
-      Above icon
-    </label>
-	</div>
-  <div class="radio">
-    <label for="numberPosition-2">
-      <input type="radio" name="numberPosition" id="numberPosition-2" value="under">
-      Under icon
-    </label>
-	</div>
-  <div class="radio">
-    <label for="numberPosition-3">
-      <input type="radio" name="numberPosition" id="numberPosition-3" value="left">
-      Left of icon
-    </label>
-	</div>
-  </div>
-</div>
-
-<!-- Select Basic -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="selectbasic">Number font size</label>
-  <div class="col-md-4">
-    <select id="selectbasic" name="selectbasic" class="form-control">
-      <option value="small">Small</option>
-      <option value="normal">Normal</option>
-      <option value="big">Big</option>
-    </select>
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="numberColor">Number color</label>  
-  <div class="col-md-5">
-  <input id="numberColor" name="numberColor" type="text" placeholder="Enter hex code (e.g. #000000)" class="form-control input-md">
-  <span class="help-block">help</span>  
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="startingNumber">Number to start from</label>  
-  <div class="col-md-4">
-  <input id="startingNumber" name="startingNumber" type="text" placeholder="Enter # to start from" class="form-control input-md">
-  <span class="help-block">help</span>  
-  </div>
-</div>
-
-</fieldset>
-</form>
-
-                    
-                </div>
-            </div>
-            </div>
-        </div></div>
 
 <!-- LIVE PREVIEW section -->  
-<div class="container-fluid bg-1 text-center">
-  <h2>Live preview</h2>
+<div class="container">
+  <center><h2>Live preview</h2></center>
+  
 </div>
 
 <!-- GET YOUR CODE section -->
-<div class="container-fluid bg-1">
+<div class="container">
     <center>
       <h2>Get your code</h2>
       <button type="button" class="btn">
