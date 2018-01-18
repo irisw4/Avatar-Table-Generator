@@ -9,14 +9,17 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
     <title>Icon Table Generator by chlorophylls</title>
+  
     <link rel="stylesheet" href="style.css">
 </head>
     
 <body>
-    <div class="container-fluid bg-1 text-center">
+
+<div class="container-fluid bg-1 text-center">
         <h1>Icon Table Generator</h1>
         
         <p><small>by irisu</small></p>
+      
         <p>Instantly generate HTML you can copy and paste to display your graphics in a nice, neat, numbered table.</p>
     </div>
 
@@ -30,36 +33,42 @@
 <form class="form-horizontal">
 <fieldset>
 
-<!-- Appended Input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="singleImageURL">Add images 1-by-1</label>
-  <div class="col-md-8">
-    <div class="input-group">
-      <input id="singleImageURL" name="singleImageURL" class="form-control" placeholder="Image URL" type="text">
-      <span class="input-group-addon">+</span>
-    </div>
-    
-  </div>
+<!-- ADD IMAGES 1-BY-1 section -->  
+<label class="control-label" for="singleImageURL">Add images 1-by-1</label>
+<div class="input-group">
+  <input type="text" 
+  class="form-control"
+  name="singleImageURL">
+    <span class="input-group-btn">
+      <button class="btn btn-default" type="button">+ Add URL</button>
+    </span>
 </div>
-<!-- Textarea -->
+  
+<!-- ADD MULTIPLE IMAGES section -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="multipleImageURLs">Add multiple images</label>
   <div class="col-md-4">                     
-    <textarea class="form-control" id="multipleImageURLs" name="multipleImageURLs">Add multiple image links here. SEPARATE YOUR LINKS WITH SEMICOLONS (;)</textarea>
+    <textarea class="form-control" 
+    id="multipleImageURLs" 
+    name="multipleImageURLs" 
+    style="min-width: 100%">Add multiple image links here. SEPARATE YOUR LINKS WITH SEMICOLONS (;)
+    </textarea>
   </div>
 </div>
 
-<!-- Appended Input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="appendedtext">Add from Imgur album</label>
-  <div class="col-md-8">
-    <div class="input-group">
-      <input id="appendedtext" name="appendedtext" class="form-control" placeholder="URL to Imgur album" type="text">
-      <span class="input-group-addon">+</span>
-    </div>
-    <p class="help-block">help</p>
-  </div>
+<!-- ADD FROM IMGUR ALBUM section -->
+<label class="control-label" for="imgurAlbumURL">Add from Imgur album</label>
+<div class="input-group">
+   <input type="text" 
+    class="form-control" 
+    placeholder="Link to Imgur album"
+    name="imgurAlbumURL">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">+ Add URL</button>
+      </span>
 </div>
+<p class="help-block">help</p>
+  
 <!-- Select Multiple -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="currentImageURLs">All images currently added</label>
@@ -242,11 +251,12 @@
     
     <h2>Copy & paste</h2>
       <center>
-        <button type="button" class="btn">Copy code to clipboard</button> <br><br>
+        <button type="button" class="btn">Copy code to clipboard</button><br><br>
         <textarea rows="10" cols="100">
             At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
         </textarea>
       </center>
-</body>
-    
+
+</body>  
+
 </html>
