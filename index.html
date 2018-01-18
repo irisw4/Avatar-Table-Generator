@@ -133,53 +133,98 @@
   
   <!-- CELL STYLING section -->
   <div class="col-sm-6">
+  <form class="form-horizontal">
+  <fieldset>
+
   <legend>Cell styling</legend>
     
     <!-- Cell background color input field -->
-    <label class="control-label" for="cellBGColor">Cell background color</label>  
-      <input id="cellBGColor" name="cellBGColor" type="text" placeholder="Enter hex code (e.g. #000000)" class="form-control input-md">  
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="cellBGColor">Cell background color</label>  
+      <div class="col-md-4">
+        <input id="cellBGColor" name="cellBGColor" type="text" placeholder="Enter hex code (e.g. #000000)" class="form-control input-md">
+    
+      </div>
+    </div> 
  
     <!-- Text before number input field -->
-    <label class="control-label" for="optionalPrefix">Text before number (optional)</label>  
-      <input id="optionalPrefix" name="optionalPrefix" type="text" placeholder="E.g. Picture, Icon, #, etc." class="form-control input-md">
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="optionalPrefix">Text before number (optional)</label>  
+      <div class="col-md-4">
+        <input id="textinput" name="textinput" type="text" placeholder="E.g. Picture, Icon, #, etc." class="form-control input-md">
+
+      </div>
+    </div>
     
     <!-- Number to start from input field -->
-    <label class="control-label" for="startingNumber">Number to start from</label>
-      <input id="startingNumber" name="startingNumber" type="text" placeholder="Enter # to start from" class="form-control input-md">
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="startNumber">Number to start from</label>  
+      <div class="col-md-4">
+        <input id="startNumber" name="startNumber" type="text" placeholder="Enter number to start from" class="form-control input-md">
+    
+      </div>
+    </div>
     
     <!-- Number position radio buttons -->
-    <label class="control-label" for="numberPosition">Number position</label>
-    
-      <div class="radio">
-        <input type="radio" name="numberPosition" id="numberPosition-0" value="none" checked="checked"> No numbers
-	  </div>
-    
-      <div class="radio">
-        <input type="radio" name="numberPosition" id="numberPosition-1" value="above"> Above icon
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="radios">Number position</label>
+      <div class="col-md-4">
+      
+        <div class="radio">
+          <label for="radios-0">
+            <input type="radio" name="radios" id="radios-0" value="none" checked="checked">
+            No numbers
+          </label>
+        </div>
+
+        <div class="radio">
+          <label for="radios-1">
+            <input type="radio" name="radios" id="radios-1" value="above">
+            Above icon
+          </label>
+        </div>
+
+        <div class="radio">
+        <label for="radios-2">
+          <input type="radio" name="radios" id="radios-2" value="under">
+          Under icon
+        </label>
+        </div>
+
+        <div class="radio">
+        <label for="radios-3">
+          <input type="radio" name="radios" id="radios-3" value="left">
+          Left of icon
+        </label>
+        </div>
+      
       </div>
-    
-      <div class="radio">
-        <input type="radio" name="numberPosition" id="numberPosition-2" value="under"> Under icon
-	  </div>
-    
-      <div class="radio">
-        <input type="radio" name="numberPosition" id="numberPosition-3" value="left"> Left of icon
-      </div>
+    </div>
     
       <!-- Number font size dropdown menu -->
-    <label class="col-md-4 control-label" for="selectbasic">Number font size</label>
-    
-      <select id="selectbasic" name="selectbasic" class="form-control">
-        <option value="small">Small</option>
-        <option value="normal">Normal</option>
-        <option value="big">Big</option>
-      </select>
-    
-    <!-- Number color input field -->
-    <label class="col-md-4 control-label" for="numberColor">Number color</label>  
-      <input id="numberColor" name="numberColor" type="text" placeholder="Enter hex code (e.g. #000000)" class="form-control input-md">
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="numberSize">Number size</label>
   
-  <!-- END of CELL STYLING section -->  
+        <div class="col-md-4">
+        <select id="numberSize" name="numberSize" class="form-control">
+          <option value="small">Small</option>
+          <option value="normal">Normal</option>
+          <option value="big">Big</option>
+        </select>
+        </div>
+      </div>
+    
+      <!-- Number color input field -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="numberColor">Number color</label>  
+        <div class="col-md-4">
+          <input id="numberColor" name="numberColor" type="text" placeholder="Enter hex code (e.g. #000000)" class="form-control input-md">
+        </div>
+      </div>
+  
+  <!-- END of CELL STYLING section -->
+  </fieldset>
+  </form>  
   </div>
 
 <!-- END of CUSTOMIZE section -->  
