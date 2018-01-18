@@ -86,15 +86,24 @@
   
   <!-- TABLE STYLING section -->
   <div class="col-sm-6">
+    <form class="form-horizontal">
+	<fieldset>
     <legend>Table styling</legend>
     
     <!-- Table background color input field -->
-    <label class="control-label" for="tableBGColor">Table background color</label>  
-      <input id="tableBGColor" name="tableBGColor" type="text" placeholder="Enter hex code (e.g. #000000)" class="form-control input-md">
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="tableBGColor">Table background color</label>  
+      <div class="col-md-6">
+        <input id="tableBGColor" name="tableBGColor" type="text" placeholder="Enter hex code (e.g. #000000)" class="form-control input-md">
+    
+      </div>
+    </div>
 
     <!-- Images per row input dropdown menu -->
-    <label class="control-label" for="selectbasic">Images per row</label>
-        <select id="selectbasic" name="selectbasic" class="form-control">
+    <div class="form-group">
+    <label class="col-md-4 control-label" for="imagesPerRow">Images per row</label>
+      <div class="col-md-2">
+        <select id="imagesPerRow" name="imagesPerRow" class="form-control">
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -103,33 +112,35 @@
           <option value="6">6</option>
           <option value="7">7</option>
         </select>
+        
+      </div>
+    </div>
     
     <!-- Table alignment radio buttons -->
     <div class="form-group">
-    <label class="control-label" for="tableAlignment">Table alignment</label>
-
-    <div class="radio">
-      <label for="tableAlignment-0">
-        <input type="radio" name="tableAlignment" id="tableAlignment-0" value="center" checked="checked">
-        Center
-      </label>
-    </div>
-    <div class="radio">
-      <label for="tableAlignment-1">
-        <input type="radio" name="tableAlignment" id="tableAlignment-1" value="left">
-        Left
-      </label>
-    </div>
-    <div class="radio">
-      <label for="tableAlignment-2">
-        <input type="radio" name="tableAlignment" id="tableAlignment-2" value="right">
-        Right
-      </label>
+      <label class="col-md-4 control-label" for="radios">Table alignment</label>
+      <div class="col-md-4"> 
+        <label class="radio-inline" for="radios-0">
+          <input type="radio" name="radios" id="radios-0" value="left" checked="checked">
+          Left
+        </label> 
+        <label class="radio-inline" for="radios-1">
+          <input type="radio" name="radios" id="radios-1" value="center">
+          Center
+        </label> 
+        <label class="radio-inline" for="radios-2">
+          <input type="radio" name="radios" id="radios-2" value="right">
+          Right
+        </label>
+        
+      </div>
     </div>
       
-<!-- END OF TABLE STYLING SECTION -->    
+<!-- END OF TABLE STYLING SECTION -->
+  </fieldset>
+  </form>      
   </div>
-</div>
+
   
   <!-- CELL STYLING section -->
   <div class="col-sm-6">
@@ -141,7 +152,7 @@
     <!-- Cell background color input field -->
     <div class="form-group">
       <label class="col-md-4 control-label" for="cellBGColor">Cell background color</label>  
-      <div class="col-md-4">
+      <div class="col-md-6">
         <input id="cellBGColor" name="cellBGColor" type="text" placeholder="Enter hex code (e.g. #000000)" class="form-control input-md">
     
       </div>
@@ -150,7 +161,7 @@
     <!-- Text before number input field -->
     <div class="form-group">
       <label class="col-md-4 control-label" for="optionalPrefix">Text before number (optional)</label>  
-      <div class="col-md-4">
+      <div class="col-md-6">
         <input id="textinput" name="textinput" type="text" placeholder="E.g. Picture, Icon, #, etc." class="form-control input-md">
 
       </div>
@@ -159,7 +170,7 @@
     <!-- Number to start from input field -->
     <div class="form-group">
       <label class="col-md-4 control-label" for="startNumber">Number to start from</label>  
-      <div class="col-md-4">
+      <div class="col-md-6">
         <input id="startNumber" name="startNumber" type="text" placeholder="Enter number to start from" class="form-control input-md">
     
       </div>
@@ -168,7 +179,7 @@
     <!-- Number position radio buttons -->
     <div class="form-group">
       <label class="col-md-4 control-label" for="radios">Number position</label>
-      <div class="col-md-4">
+      <div class="col-md-6">
       
         <div class="radio">
           <label for="radios-0">
@@ -217,7 +228,7 @@
       <!-- Number color input field -->
       <div class="form-group">
         <label class="col-md-4 control-label" for="numberColor">Number color</label>  
-        <div class="col-md-4">
+        <div class="col-md-6">
           <input id="numberColor" name="numberColor" type="text" placeholder="Enter hex code (e.g. #000000)" class="form-control input-md">
         </div>
       </div>
