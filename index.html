@@ -40,7 +40,9 @@
   class="form-control"
   name="singleImageURL">
     <span class="input-group-btn">
-      <button class="btn btn-default" type="button">+ Add URL</button>
+      <button class="btn btn-default" type="button">
+        <span class="glyphicon glyphicon-plus"></span> Add link
+      </button>
     </span>
 </div>
   
@@ -64,18 +66,21 @@
     placeholder="Link to Imgur album"
     name="imgurAlbumURL">
       <span class="input-group-btn">
-        <button class="btn btn-default" type="button">+ Add URL</button>
+        <button class="btn btn-default" type="button">
+          <span class="glyphicon glyphicon-plus"></span> Add album link
+        </button>
       </span>
 </div>
 <p class="help-block">help</p>
   
-<!-- Select Multiple -->
+<!-- ALL IMAGES CURRENTLY ADDED section -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="currentImageURLs">All images currently added</label>
   <div class="col-md-8">
     <select id="currentImageURLs" name="currentImageURLs" class="form-control" multiple="multiple">
-      <option value="1">Option one</option>
-      <option value="2">Option two</option>
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+      <option value="3">Option 3</option>
     </select>
   </div>
 </div>
@@ -249,11 +254,10 @@
     <h2>Live preview</h2>
     <p>Total icon count: (put this in Add image links section instead)</p>
     
-    <h2>Copy & paste</h2>
+    <h2>Get your code</h2>
       <center>
-        <button type="button" class="btn">Copy code to clipboard</button><br><br>
-        <textarea rows="10" cols="100">
-            At w3schools.com you will learn how to make a website. We offer free tutorials in all web development technologies.
+        <button type="button" class="btn"><span class="glyphicon glyphicon-copy"></span> Copy to clipboard</button> <br><br>
+        <textarea rows="10" cols="100">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc id mauris vitae turpis commodo suscipit ac in velit. Integer volutpat, nisi sed lobortis vehicula, nibh felis laoreet magna, ut cursus lectus libero eget sapien. Donec in sapien pharetra, sagittis urna eu, fermentum purus. Suspendisse potenti. Quisque vel fermentum augue. Nunc pulvinar tellus eu mauris pellentesque laoreet non eu lectus. Nunc consequat sit amet diam eu imperdiet. Vivamus posuere, quam nec viverra semper, justo urna eleifend turpis, ac sodales enim tellus vitae neque. Proin et tortor erat. Ut nec dapibus magna. In id commodo dolor.
         </textarea>
       </center>
 
