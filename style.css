@@ -1,25 +1,24 @@
 body {
-    font-family: Segoe UI;
+  font-family: Segoe UI;
 }
 
 h1 {
-    color: #ffffff;
-    font-size: 2.5em;
-    line-height: 1.05em;
+  color: #ffffff;
+  font-size: 2.5em;
+  line-height: 1.05em;
 }
 
 h2 {
-    color: #0074D9;
-    font-size: 2em;
-    line-height: 1.05em;
+  color: #0074D9;
+  font-size: 2em;
+  line-height: 1.05em;
 }
 
 h3 {
-    color: #0074D9;
+  color: #0074D9;
 }
 
-p {
-}
+p {}
 
 .button {
   -webkit-border-radius: 10;
@@ -37,6 +36,31 @@ p {
   text-decoration: none;
 }
 
+.container-fluid {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
 .header-bg {
-    background-color: #9fa8da
+  background-color: #C5CAE9;
+}
+
+.upload-bg {
+
+}
+
+.upload-section-left {
+
+}
+
+.upload-section-right{
+
+}
+
+.customize-section-left {
+  
+}
+
+.customize-section-right{
+  
 }
