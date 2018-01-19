@@ -1,313 +1,316 @@
 <!DOCTYPE html>
 <html>
-    
-<head>
+
+  <head>
     <meta charset="utf-8">
-    <meta name= "viewport" content = "width=device-width, initial-scale = 1">
+    <meta name="viewport" content="width=device-width, initial-scale = 1">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    
+
     <title>Icon Table Generator by chlorophylls</title>
 
-</head>
-    
-<body>
+  </head>
 
-<div class="container-fluid text-center header-bg">
-        <h1>Icon Table Generator</h1>
-        
-        <p><small>by irisu</small></p>
-      
-        <p>Instantly generate HTML you can copy and paste to display your graphics in a nice, neat, numbered table.</p>
-</div>
-  
-<!-- START OF UPLOAD SECTION -->
-<div class="container-fluid">
-    <div class="row Upload">
-      <center><h2>UPLOAD <span class="glyphicon glyphicon-upload"></span></h2></center>
-      
-    <!-- ADD IMAGE LINKS SECTION -->
-    <div class="col-sm-6">
-    <form class="form-horizontal">
-    <fieldset>          
+  <body>
 
-    <legend>Add image links</legend>
-        
-        <!-- Add images 1-by-1 input field -->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="singleImageURL">Add images 1-by-1</label>
-            
-          <div class="col-md-8">
-            <div class="input-group">
-              <input id="singleImageURL" name="singleImageURL" class="form-control" placeholder="Direct link to image" type="text">
-                <span class="input-group-btn">
+    <div class="container-fluid text-center header-bg">
+      <h1>ICON TABLE GENERATOR</h1>
+
+      <p><small>by irisu</small></p>
+
+      <p>Instantly generate HTML you can copy and paste to display your graphics in a nice, neat, numbered table.</p>
+    </div>
+
+    <!-- START OF UPLOAD SECTION -->
+    <div class="container-fluid">
+      <div class="row upload-bg">
+        <center>
+          <h2>UPLOAD <span class="glyphicon glyphicon-upload"></span></h2></center>
+
+        <!-- ADD IMAGE LINKS SECTION -->
+        <div class="col-sm-6 upload-section-left">
+          <form class="form-horizontal">
+            <fieldset>
+
+              <legend>Add image links</legend>
+
+              <!-- Add images 1-by-1 input field -->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="singleImageURL">Add images 1-by-1</label>
+
+                <div class="col-md-8">
+                  <div class="input-group">
+                    <input id="singleImageURL" name="singleImageURL" class="form-control" placeholder="Direct link to image" type="text">
+                    <span class="input-group-btn">
                     <button class="btn btn-primary" type="button">
                         <span class="glyphicon glyphicon-plus"></span> Add link
                     </button>
-                </span>
-            </div>
-          </div>
-            
-        </div>
+                    </span>
+                  </div>
+                </div>
 
-        
-        <!-- Add from Imgur album input field -->
-        <div class="form-group">
-        <label class="col-md-4 control-label" for="imgurAlbumURL">Add from Imgur album</label>
-            
-          <div class="col-md-8">
-            <div class="input-group">
-              <input id="imgurAlbumURL" name="imgurAlbumURL" class="form-control" placeholder="Link to Imgur album" type="text">
-                <span class="input-group-btn">
+              </div>
+
+
+              <!-- Add from Imgur album input field -->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="imgurAlbumURL">Add from Imgur album</label>
+
+                <div class="col-md-8">
+                  <div class="input-group">
+                    <input id="imgurAlbumURL" name="imgurAlbumURL" class="form-control" placeholder="Link to Imgur album" type="text">
+                    <span class="input-group-btn">
                     <button class="btn btn-primary" type="button">
                         <span class="glyphicon glyphicon-plus"></span> Add album
                     </button>
-                </span>
-            </div>
-          </div>
-            
+                    </span>
+                  </div>
+                </div>
+
+              </div>
+
+
+              <!-- Add multiple images input field -->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="multipleImageURLs">Add multiple images</label>
+                <div class="col-md-8">
+                  <textarea class="form-control" id="multipleImageURLs" name="multipleImageURLs" placeholder="Add multiple image links here."></textarea>
+                </div>
+              </div>
+
+              <!-- END OF ADD IMAGE LINKS section -->
+            </fieldset>
+          </form>
         </div>
 
-        
-        <!-- Add multiple images input field -->
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="multipleImageURLs">Add multiple images</label>
-          <div class="col-md-8">                     
-            <textarea class="form-control" id="multipleImageURLs" name="multipleImageURLs" placeholder="Add multiple image links here."></textarea>
-          </div>
-        </div>
-    
-    <!-- END OF ADD IMAGE LINKS section -->
-    </fieldset>
-    </form>
-    </div>      
-        
-      <!-- MANAGE IMAGES SECTION -->
-      <div class="col-sm-6">
-        <form class="form-horizontal">
-        <fieldset>
-        <legend>Manage images</legend>
-        
-        <div class="form-group">
-          <label class="col-md-4 control-label" for="currentImages">Currently added images</label>
-            
-          <div class="col-md-6">
-            <select id="currentImages" name="currentImages" class="form-control" multiple="multiple" size="7">
-              <option value="1">Option one</option>
-              <option value="2">Option two</option>
-            </select>
-          </div>
-            
-          <div class="col-sm-2">
-            <button type="button" class="btn btn-primary">
-              <span class="glyphicon glyphicon-arrow-up"></span>
-            </button>
-              
-            <br><br>
-            <button type="button" class="btn btn-primary">
-              <span class="glyphicon glyphicon-arrow-down"></span>
-            </button>
-              
-            <br><br>  
-            <button type="button" class="btn btn-primary">
-              <span class="glyphicon glyphicon-remove"></span>
-            </button>
-              
-          </div>
-            
-        </div>    
-          
-      <p>Total icon count:</p>
-            
-      <!-- END OF CURRENT IMAGES SECTION -->    
-      </fieldset>
-      </form>    
-      </div>
-      
-<!-- END OF UPLOAD SECTION -->
-</div>
-  
-<!-- START OF CUSTOMIZE SECTION -->
-<div class="row Customize">
-  <center><h2>CUSTOMIZE <span class="glyphicon glyphicon-pencil"></span></h2></center>
-  
-  <!-- TABLE STYLING section -->
-  <div class="col-sm-6">
-    <form class="form-horizontal">
-	<fieldset>
-    <legend>Table styling</legend>
-    
-    <!-- Table background color input field -->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="tableBGColor">Table background color</label>  
-      <div class="col-md-6">
-        <input id="tableBGColor" name="tableBGColor" type="text" placeholder="Enter hex code (e.g. #000000)" class="form-control input-md">
-    
-      </div>
-    </div>
+        <!-- MANAGE IMAGES SECTION -->
+        <div class="col-sm-6 upload-section-right">
+          <form class="form-horizontal">
+            <fieldset>
+              <legend>Manage images</legend>
 
-    <!-- Images per row input dropdown menu -->
-    <div class="form-group">
-    <label class="col-md-4 control-label" for="imagesPerRow">Images per row</label>
-      <div class="col-md-2">
-        <select id="imagesPerRow" name="imagesPerRow" class="form-control">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-        </select>
-        
-      </div>
-    </div>
-    
-    <!-- Table alignment radio buttons -->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="radios">Table alignment</label>
-      <div class="col-md-6"> 
-        <label class="radio-inline" for="radios-0">
-          <input type="radio" name="radios" id="radios-0" value="left">
-          Left
-        </label> 
-        <label class="radio-inline" for="radios-1">
-          <input type="radio" name="radios" id="radios-1" value="center" checked="checked">
-          Center
-        </label> 
-        <label class="radio-inline" for="radios-2">
-          <input type="radio" name="radios" id="radios-2" value="right">
-          Right
-        </label>
-        
-      </div>
-    </div>
-      
-<!-- END OF TABLE STYLING SECTION -->
-  </fieldset>
-  </form>      
-  </div>
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="currentImages">Currently added images</label>
 
-  
-  <!-- CELL STYLING section -->
-  <div class="col-sm-6">
-  <form class="form-horizontal">
-  <fieldset>
+                <div class="col-md-6">
+                  <select id="currentImages" name="currentImages" class="form-control" multiple="multiple" size="7">
+                    <option value="1">Option one</option>
+                    <option value="2">Option two</option>
+                  </select>
+                </div>
 
-  <legend>Numbering</legend>
-    
-    <!-- Cell background color input field -->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="cellBGColor">Background color</label>  
-      <div class="col-md-3">
-        <input id="cellBGColor" name="cellBGColor" type="text" placeholder="#ffffff" class="form-control input-md">
-    
-      </div>
-    </div> 
- 
-    <!-- Text before number input field -->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="optionalPrefix">Text before number</label>  
-      <div class="col-md-4">
-        <input id="textinput" name="textinput" type="text" placeholder="Picture, Icon, #, etc." class="form-control input-md">
+                <div class="col-sm-2">
+                  <button type="button" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-arrow-up"></span>
+                  </button>
 
-      </div>
-    </div>
-    
-    <!-- Number to start from input field -->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="startNumber">Number to start from</label>  
-      <div class="col-md-2">
-        <input id="startNumber" name="startNumber" type="text" placeholder="000" class="form-control input-md">
-    
-      </div>
-    </div>
-    
-    <!-- Number position radio buttons -->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="radios">Number position</label>
-      <div class="col-md-6">
-      
-        <div class="radio">
-          <label for="radios-0">
-            <input type="radio" name="radios" id="radios-0" value="none" checked="checked">
-            No numbers
-          </label>
+                  <br>
+                  <br>
+                  <button type="button" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-arrow-down"></span>
+                  </button>
+
+                  <br>
+                  <br>
+                  <button type="button" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-remove"></span>
+                  </button>
+
+                </div>
+
+              </div>
+
+              <div class="col-md-4">
+                <p>Total icon count:</p>
+              </div>
+
+              <!-- END OF CURRENT IMAGES SECTION -->
+            </fieldset>
+          </form>
         </div>
 
-        <div class="radio">
-          <label for="radios-1">
-            <input type="radio" name="radios" id="radios-1" value="above">
-            Above icon
-          </label>
-        </div>
-
-        <div class="radio">
-        <label for="radios-2">
-          <input type="radio" name="radios" id="radios-2" value="under">
-          Under icon
-        </label>
-        </div>
-
-        <div class="radio">
-        <label for="radios-3">
-          <input type="radio" name="radios" id="radios-3" value="left">
-          Left of icon
-        </label>
-        </div>
-      
+        <!-- END OF UPLOAD SECTION -->
       </div>
-    </div>
-    
-      <!-- Number font size dropdown menu -->
-    <div class="form-group">
-        <label class="col-md-4 control-label" for="numberSize">Number size</label>
-        <div class="col-md-3">
-        <select id="numberSize" name="numberSize" class="form-control">
-          <option value="small">Small</option>
-          <option value="normal">Normal</option>
-          <option value="big">Big</option>
-        </select>
-            
+
+      <!-- START OF CUSTOMIZE SECTION -->
+      <div class="row Customize">
+        <center>
+          <h2>CUSTOMIZE <span class="glyphicon glyphicon-pencil"></span></h2></center>
+
+        <!-- TABLE STYLING section -->
+        <div class="col-sm-6 customize-section-left">
+          <form class="form-horizontal">
+            <fieldset>
+              <legend>Table styling</legend>
+
+              <!-- Table background color input field -->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="tableBGColor">Table background color</label>
+                <div class="col-md-6">
+                  <input id="tableBGColor" name="tableBGColor" type="text" placeholder="Enter hex code (e.g. #000000)" class="form-control input-md">
+
+                </div>
+              </div>
+
+              <!-- Images per row input dropdown menu -->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="imagesPerRow">Images per row</label>
+                <div class="col-md-2">
+                  <select id="imagesPerRow" name="imagesPerRow" class="form-control">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                  </select>
+
+                </div>
+              </div>
+
+              <!-- Table alignment radio buttons -->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="radios">Table alignment</label>
+                <div class="col-md-6">
+                  <label class="radio-inline" for="radios-0">
+                    <input type="radio" name="radios" id="radios-0" value="left"> Left
+                  </label>
+                  <label class="radio-inline" for="radios-1">
+                    <input type="radio" name="radios" id="radios-1" value="center" checked="checked"> Center
+                  </label>
+                  <label class="radio-inline" for="radios-2">
+                    <input type="radio" name="radios" id="radios-2" value="right"> Right
+                  </label>
+
+                </div>
+              </div>
+
+              <!-- END OF TABLE STYLING SECTION -->
+            </fieldset>
+          </form>
         </div>
-      </div>
-    
-      <!-- Number color input field -->
-      <div class="form-group">
-        <label class="col-md-4 control-label" for="numberColor">Number color</label>  
-        <div class="col-md-3">
-          <input id="numberColor" name="numberColor" type="text" placeholder="#000000" class="form-control input-md">
+
+
+        <!-- CELL STYLING section -->
+        <div class="col-sm-6 customize-section-right">
+          <form class="form-horizontal">
+            <fieldset>
+
+              <legend>Numbering</legend>
+
+              <!-- Cell background color input field -->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="cellBGColor">Background color</label>
+                <div class="col-md-3">
+                  <input id="cellBGColor" name="cellBGColor" type="text" placeholder="#ffffff" class="form-control input-md">
+
+                </div>
+              </div>
+
+              <!-- Text before number input field -->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="optionalPrefix">Text before number</label>
+                <div class="col-md-4">
+                  <input id="textinput" name="textinput" type="text" placeholder="Picture, Icon, #, etc." class="form-control input-md">
+
+                </div>
+              </div>
+
+              <!-- Number to start from input field -->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="startNumber">Number to start from</label>
+                <div class="col-md-2">
+                  <input id="startNumber" name="startNumber" type="text" placeholder="000" class="form-control input-md">
+
+                </div>
+              </div>
+
+              <!-- Number position radio buttons -->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="radios">Number position</label>
+                <div class="col-md-6">
+
+                  <div class="radio">
+                    <label for="radios-0">
+                      <input type="radio" name="radios" id="radios-0" value="none" checked="checked"> No numbers
+                    </label>
+                  </div>
+
+                  <div class="radio">
+                    <label for="radios-1">
+                      <input type="radio" name="radios" id="radios-1" value="above"> Above icon
+                    </label>
+                  </div>
+
+                  <div class="radio">
+                    <label for="radios-2">
+                      <input type="radio" name="radios" id="radios-2" value="under"> Under icon
+                    </label>
+                  </div>
+
+                  <div class="radio">
+                    <label for="radios-3">
+                      <input type="radio" name="radios" id="radios-3" value="left"> Left of icon
+                    </label>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Number font size dropdown menu -->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="numberSize">Number size</label>
+                <div class="col-md-3">
+                  <select id="numberSize" name="numberSize" class="form-control">
+                    <option value="small">Small</option>
+                    <option value="normal">Normal</option>
+                    <option value="big">Big</option>
+                  </select>
+
+                </div>
+              </div>
+
+              <!-- Number color input field -->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="numberColor">Number color</label>
+                <div class="col-md-3">
+                  <input id="numberColor" name="numberColor" type="text" placeholder="#000000" class="form-control input-md">
+                </div>
+              </div>
+
+              <!-- END of CELL STYLING section -->
+            </fieldset>
+          </form>
         </div>
+
+        <!-- END of CUSTOMIZE section -->
       </div>
-  
-  <!-- END of CELL STYLING section -->
-  </fieldset>
-  </form>  
-  </div>
 
-<!-- END of CUSTOMIZE section -->  
-</div>
+      <!-- LIVE PREVIEW section -->
+      <div class="container">
+        <center>
+          <h2>PREVIEW</h2></center>
 
-<!-- LIVE PREVIEW section -->  
-<div class="container">
-  <center><h2>PREVIEW</h2></center>
-  
-</div>
+      </div>
 
-<!-- GET YOUR CODE section -->
-<div class="container">
-    <center>
-      <h2>COPY</h2>
-      <button type="button" class="btn btn-primary">
-        Copy to clipboard <span class="glyphicon glyphicon-copy"></span>
-      </button> <br><br>
-      <textarea rows="7" cols="100">PLACEHOLDER PLACEHOLDER PLACEHOLDER</textarea>
-    </center>
-</div>
-  
-</body>  
+      <!-- GET YOUR CODE section -->
+      <div class="container">
+        <center>
+          <h2>COPY</h2>
+          <button type="button" class="btn btn-primary">
+            Copy to clipboard <span class="glyphicon glyphicon-copy"></span>
+          </button>
+          <br>
+          <br>
+          <textarea rows="7" cols="100">PLACEHOLDER PLACEHOLDER PLACEHOLDER</textarea>
+        </center>
+      </div>
+
+  </body>
+
 </html>
