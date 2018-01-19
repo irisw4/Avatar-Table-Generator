@@ -48,7 +48,7 @@ p {}
 }
 
 .upload-section {
-  background-color: #EEEEEE;
+  background-color: #B2DFDB;
 }
 
 .upload-section-left {}
@@ -60,7 +60,7 @@ p {}
 }
 
 .customize-section {
-  background-color: #EEEEEE;
+  background-color: #B3E5FC;
 }
 
 .customize-section-left {}
@@ -68,11 +68,11 @@ p {}
 .customize-section-right {}
 
 .preview-header {
-  background-color: #FFECB3;
+  background-color: #FFE082;
 }
 
 .preview-section {
-  background-color: #FFE082;
+  background-color: #FFECB3;
 }
 
 .copy-header {
