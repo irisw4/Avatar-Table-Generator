@@ -7,7 +7,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="main.js"></script>
+    <script src="functions.js"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
@@ -52,7 +52,7 @@
                   <div class="input-group">
                     <input id="singleImageURL" name="singleImageURL" class="form-control" placeholder="Direct link to image" type="text">
                     <span class="input-group-btn">
-                    <button class="btn btn-primary" type="button" onclick="addSingleLink()">
+                    <button class="btn btn-primary" type="button" id="addLinkButton">
                         <span class="glyphicon glyphicon-plus"></span> Add link
                     </button>
                     </span>
@@ -85,6 +85,12 @@
                 <label class="col-md-4 control-label" for="multipleImageURLs">Add multiple images</label>
                 <div class="col-md-8">
                   <textarea class="form-control" id="multipleImageURLs" name="multipleImageURLs" placeholder="Add multiple image links here."></textarea>
+
+                  <br>
+                  <button class="btn btn-primary" type="button" id="addMultiLinksButton">
+                    <span class="glyphicon glyphicon-plus"></span> Add multiple links
+                  </button>
+
                 </div>
               </div>
 
@@ -110,19 +116,19 @@
                 </div>
 
                 <div class="col-sm-2">
-                  <button type="button" class="btn btn-primary">
+                  <button type="button" class="btn btn-primary" id="moveUpButton" value="moveUp">
                     <span class="glyphicon glyphicon-arrow-up"></span>
                   </button>
 
                   <br>
                   <br>
-                  <button type="button" class="btn btn-primary">
+                  <button type="button" class="btn btn-primary" id="moveDownButton">
                     <span class="glyphicon glyphicon-arrow-down"></span>
                   </button>
 
                   <br>
                   <br>
-                  <button type="button" class="btn btn-primary">
+                  <button type="button" class="btn btn-primary" id="removeButton">
                     <span class="glyphicon glyphicon-remove"></span>
                   </button>
 
