@@ -4,13 +4,11 @@ body {
 
 h1 {
   color: #ffffff;
-  font-size: 2.5em;
   line-height: 1.05em;
 }
 
 h2 {
   color: #0074D9;
-  font-size: 2em;
   line-height: 1.05em;
 }
 
@@ -37,30 +35,50 @@ p {}
 }
 
 .container-fluid {
-    padding-top: 30px;
-    padding-bottom: 30px;
+  padding-top: 30px;
+  padding-bottom: 40px;
 }
 
-.header-bg {
+.header-section {
   background-color: #C5CAE9;
 }
 
-.upload-bg {
-
+.upload-header {
+  background-color: #80CBC4;
 }
 
-.upload-section-left {
-
+.upload-section {
+  background-color: #EEEEEE;
 }
 
-.upload-section-right{
+.upload-section-left {}
 
+.upload-section-right {}
+
+.customize-header {
+  background-color: #81D4FA;
 }
 
-.customize-section-left {
-  
+.customize-section {
+  background-color: #EEEEEE;
 }
 
-.customize-section-right{
-  
+.customize-section-left {}
+
+.customize-section-right {}
+
+.preview-header {
+  background-color: #FFECB3;
+}
+
+.preview-section {
+  background-color: #FFE082;
+}
+
+.copy-header {
+  background-color: #EF9A9A;
+}
+
+.copy-section {
+  background-color: #FFCDD2;
 }
