@@ -17,8 +17,8 @@
 
   <body>
 
-    <div class="container-fluid text-center header-bg">
-      <h1>ICON TABLE GENERATOR</h1>
+    <div class="container-fluid text-center header-section">
+    <h1>ICON TABLE GENERATOR</h1>
 
       <p><small>by irisu</small></p>
 
@@ -26,11 +26,15 @@
     </div>
 
     <!-- START OF UPLOAD SECTION -->
-    <div class="container-fluid">
-      <div class="row upload-bg">
-        <center>
-          <h2>UPLOAD <span class="glyphicon glyphicon-upload"></span></h2></center>
+    <div class="container-fluid upload-header">
+      <center>
+        <h2>UPLOAD <span class="glyphicon glyphicon-upload"></span></h2>
+      </center>
+    </div>
 
+
+    <div class="container-fluid upload-section">
+      <div class="row">
         <!-- ADD IMAGE LINKS SECTION -->
         <div class="col-sm-6 upload-section-left">
           <form class="form-horizontal">
@@ -135,11 +139,15 @@
 
         <!-- END OF UPLOAD SECTION -->
       </div>
+    </div>
 
-      <!-- START OF CUSTOMIZE SECTION -->
-      <div class="row Customize">
-        <center>
-          <h2>CUSTOMIZE <span class="glyphicon glyphicon-pencil"></span></h2></center>
+    <!-- START OF CUSTOMIZE SECTION -->
+    <div class="container-fluid text-center customize-header">
+      <h2>CUSTOMIZE <span class="glyphicon glyphicon-pencil"></span></h2>
+    </div>
+
+    <div class="container-fluid customize-section">
+      <div class="row">
 
         <!-- TABLE STYLING section -->
         <div class="col-sm-6 customize-section-left">
@@ -150,8 +158,8 @@
               <!-- Table background color input field -->
               <div class="form-group">
                 <label class="col-md-4 control-label" for="tableBGColor">Table background color</label>
-                <div class="col-md-6">
-                  <input id="tableBGColor" name="tableBGColor" type="text" placeholder="Enter hex code (e.g. #000000)" class="form-control input-md">
+                <div class="col-md-5">
+                  <input id="tableBGColor" name="tableBGColor" type="text" placeholder="#000000 (optional)" class="form-control input-md">
 
                 </div>
               </div>
@@ -290,26 +298,34 @@
 
         <!-- END of CUSTOMIZE section -->
       </div>
+    </div>
 
-      <!-- LIVE PREVIEW section -->
-      <div class="container">
-        <center>
-          <h2>PREVIEW</h2></center>
+    <!-- LIVE PREVIEW section -->
+    <div class="container-fluid text-center preview-header">
+      <h2>PREVIEW</h2>
+    </div>
 
-      </div>
+    <div class="container-fluid preview-section">
+      <p>
+        placeholder preview text
+      </p>
+    </div>
 
-      <!-- GET YOUR CODE section -->
-      <div class="container">
-        <center>
-          <h2>COPY</h2>
-          <button type="button" class="btn btn-primary">
-            Copy to clipboard <span class="glyphicon glyphicon-copy"></span>
-          </button>
-          <br>
-          <br>
-          <textarea rows="7" cols="100">PLACEHOLDER PLACEHOLDER PLACEHOLDER</textarea>
-        </center>
-      </div>
+    <!-- COPY YOUR CODE section -->
+    <div class="container-fluid text-center copy-header">
+      <h2>GET YOUR CODE</h2>
+    </div>
+
+    <div class="container-fluid copy-section">
+      <center>
+        <button type="button" class="btn btn-primary">
+          Copy to clipboard <span class="glyphicon glyphicon-copy"></span>
+        </button>
+        <br>
+        <br>
+        <textarea rows="7" cols="100">PLACEHOLDER PLACEHOLDER PLACEHOLDER</textarea>
+      </center>
+    </div>
 
   </body>
 
