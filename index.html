@@ -4,29 +4,31 @@
 <head>
     <meta charset="utf-8">
     <meta name= "viewport" content = "width=device-width, initial-scale = 1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     
-    <title>Icon Table Generator by chlorophylls</title>
-  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    
+    <title>Icon Table Generator by chlorophylls</title>
+
 </head>
     
 <body>
 
-<div class="container-fluid bg-1 text-center">
+<div class="container-fluid text-center header-bg">
         <h1>Icon Table Generator</h1>
         
         <p><small>by irisu</small></p>
       
         <p>Instantly generate HTML you can copy and paste to display your graphics in a nice, neat, numbered table.</p>
-    </div>
+</div>
   
 <!-- START OF UPLOAD SECTION -->
-<div class="container">
+<div class="container-fluid">
     <div class="row Upload">
-      <center><h2>Upload <span class="glyphicon glyphicon-upload"></span></h2></center>
+      <center><h2>UPLOAD <span class="glyphicon glyphicon-upload"></span></h2></center>
       
     <!-- ADD IMAGE LINKS SECTION -->
     <div class="col-sm-6">
@@ -55,7 +57,7 @@
         
         <!-- Add from Imgur album input field -->
         <div class="form-group">
-        <label class="col-md-4 control-label" for="imgurAlbumURL">Add images from Imgur album</label>
+        <label class="col-md-4 control-label" for="imgurAlbumURL">Add from Imgur album</label>
             
           <div class="col-md-8">
             <div class="input-group">
@@ -72,25 +74,58 @@
 
         
         <!-- Add multiple images input field -->
-
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="multipleImageURLs">Add multiple images</label>
+          <div class="col-md-8">                     
+            <textarea class="form-control" id="multipleImageURLs" name="multipleImageURLs" placeholder="Add multiple image links here."></textarea>
+          </div>
+        </div>
     
     <!-- END OF ADD IMAGE LINKS section -->
     </fieldset>
     </form>
     </div>      
         
-      <!-- CURRENT IMAGES SECTION -->
+      <!-- MANAGE IMAGES SECTION -->
       <div class="col-sm-6">
-        <legend>Current images</legend>
+        <form class="form-horizontal">
+        <fieldset>
+        <legend>Manage images</legend>
         
-        <label class="control-label" for="currentImageURLs">All images currently added</label>
-          <select id="currentImageURLs" name="currentImageURLs" class="form-control" multiple="multiple">
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
-          </select>    
-      <p>Total icon count:</p>
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="currentImages">Currently added images</label>
+            
+          <div class="col-md-6">
+            <select id="currentImages" name="currentImages" class="form-control" multiple="multiple" size="7">
+              <option value="1">Option one</option>
+              <option value="2">Option two</option>
+            </select>
+          </div>
+            
+          <div class="col-sm-2">
+            <button type="button" class="btn btn-primary">
+              <span class="glyphicon glyphicon-arrow-up"></span>
+            </button>
+              
+            <br><br>
+            <button type="button" class="btn btn-primary">
+              <span class="glyphicon glyphicon-arrow-down"></span>
+            </button>
+              
+            <br><br>  
+            <button type="button" class="btn btn-primary">
+              <span class="glyphicon glyphicon-remove"></span>
+            </button>
+              
+          </div>
+            
+        </div>    
           
+      <p>Total icon count:</p>
+            
+      <!-- END OF CURRENT IMAGES SECTION -->    
+      </fieldset>
+      </form>    
       </div>
       
 <!-- END OF UPLOAD SECTION -->
@@ -98,7 +133,7 @@
   
 <!-- START OF CUSTOMIZE SECTION -->
 <div class="row Customize">
-  <center><h2>Customize <span class="glyphicon glyphicon-pencil"></span></h2></center>
+  <center><h2>CUSTOMIZE <span class="glyphicon glyphicon-pencil"></span></h2></center>
   
   <!-- TABLE STYLING section -->
   <div class="col-sm-6">
@@ -163,22 +198,22 @@
   <form class="form-horizontal">
   <fieldset>
 
-  <legend>Cell styling</legend>
+  <legend>Numbering</legend>
     
     <!-- Cell background color input field -->
     <div class="form-group">
-      <label class="col-md-4 control-label" for="cellBGColor">Cell background color</label>  
-      <div class="col-md-6">
-        <input id="cellBGColor" name="cellBGColor" type="text" placeholder="Enter hex code (e.g. #000000)" class="form-control input-md">
+      <label class="col-md-4 control-label" for="cellBGColor">Background color</label>  
+      <div class="col-md-3">
+        <input id="cellBGColor" name="cellBGColor" type="text" placeholder="#ffffff" class="form-control input-md">
     
       </div>
     </div> 
  
     <!-- Text before number input field -->
     <div class="form-group">
-      <label class="col-md-4 control-label" for="optionalPrefix">Text before number (optional)</label>  
-      <div class="col-md-6">
-        <input id="textinput" name="textinput" type="text" placeholder="E.g. Picture, Icon, #, etc." class="form-control input-md">
+      <label class="col-md-4 control-label" for="optionalPrefix">Text before number</label>  
+      <div class="col-md-4">
+        <input id="textinput" name="textinput" type="text" placeholder="Picture, Icon, #, etc." class="form-control input-md">
 
       </div>
     </div>
@@ -186,8 +221,8 @@
     <!-- Number to start from input field -->
     <div class="form-group">
       <label class="col-md-4 control-label" for="startNumber">Number to start from</label>  
-      <div class="col-md-6">
-        <input id="startNumber" name="startNumber" type="text" placeholder="Enter number to start from" class="form-control input-md">
+      <div class="col-md-2">
+        <input id="startNumber" name="startNumber" type="text" placeholder="000" class="form-control input-md">
     
       </div>
     </div>
@@ -231,7 +266,7 @@
       <!-- Number font size dropdown menu -->
     <div class="form-group">
         <label class="col-md-4 control-label" for="numberSize">Number size</label>
-        <div class="col-md-4">
+        <div class="col-md-3">
         <select id="numberSize" name="numberSize" class="form-control">
           <option value="small">Small</option>
           <option value="normal">Normal</option>
@@ -244,8 +279,8 @@
       <!-- Number color input field -->
       <div class="form-group">
         <label class="col-md-4 control-label" for="numberColor">Number color</label>  
-        <div class="col-md-6">
-          <input id="numberColor" name="numberColor" type="text" placeholder="Enter hex code (e.g. #000000)" class="form-control input-md">
+        <div class="col-md-3">
+          <input id="numberColor" name="numberColor" type="text" placeholder="#000000" class="form-control input-md">
         </div>
       </div>
   
@@ -259,18 +294,18 @@
 
 <!-- LIVE PREVIEW section -->  
 <div class="container">
-  <center><h2>Live preview</h2></center>
+  <center><h2>PREVIEW</h2></center>
   
 </div>
 
 <!-- GET YOUR CODE section -->
 <div class="container">
     <center>
-      <h2>Get your code</h2>
+      <h2>COPY</h2>
       <button type="button" class="btn btn-primary">
         Copy to clipboard <span class="glyphicon glyphicon-copy"></span>
       </button> <br><br>
-      <textarea rows="10" cols="100">PLACEHOLDER PLACEHOLDER PLACEHOLDER</textarea>
+      <textarea rows="7" cols="100">PLACEHOLDER PLACEHOLDER PLACEHOLDER</textarea>
     </center>
 </div>
   
