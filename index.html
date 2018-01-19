@@ -28,42 +28,57 @@
     <div class="row Upload">
       <center><h2>Upload <span class="glyphicon glyphicon-upload"></span></h2></center>
       
-      <!-- ADD IMAGE LINKS SECTION -->
-      <div class="col-sm-6">
-        <legend>Add image links</legend>
+    <!-- ADD IMAGE LINKS SECTION -->
+    <div class="col-sm-6">
+    <form class="form-horizontal">
+    <fieldset>          
 
-        <!-- Add images 1-by-1 input field --> 
-        <label class="control-label" for="singleImageURL">Add images 1-by-1</label>
+    <legend>Add image links</legend>
         
-        <div class="input-group">
-          <input type="text" class="form-control" name="singleImageURL">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button">
-                <span class="glyphicon glyphicon-plus"></span> Add link
-              </button>
-            </span>
+        <!-- Add images 1-by-1 input field -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="singleImageURL">Add images 1-by-1</label>
+            
+          <div class="col-md-8">
+            <div class="input-group">
+              <input id="singleImageURL" name="singleImageURL" class="form-control" placeholder="Direct link to image" type="text">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button">
+                        <span class="glyphicon glyphicon-plus"></span> Add link
+                    </button>
+                </span>
+            </div>
+          </div>
+            
         </div>
+
         
-      <!-- Add from Imgur album input field -->
-      <label class="control-label" for="imgurAlbumURL">Add from Imgur album</label>
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Link to Imgur album" name="imgurAlbumURL">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button">
-              <span class="glyphicon glyphicon-plus"></span> Add album link
-              </button>
-            </span>
+        <!-- Add from Imgur album input field -->
+        <div class="form-group">
+        <label class="col-md-4 control-label" for="imgurAlbumURL">Add images from Imgur album</label>
+            
+          <div class="col-md-8">
+            <div class="input-group">
+              <input id="imgurAlbumURL" name="imgurAlbumURL" class="form-control" placeholder="Link to Imgur album" type="text">
+                <span class="input-group-btn">
+                    <button class="btn btn-primary" type="button">
+                        <span class="glyphicon glyphicon-plus"></span> Add album
+                    </button>
+                </span>
+            </div>
+          </div>
+            
         </div>
+
         
         <!-- Add multiple images input field -->
-        <label class="control-label" for="multipleImageURLs">Add multiple images</label>
-          <div class="col">                     
-            <textarea class="form-control" id="multipleImageURLs" name="multipleImageURLs" style="min-width: 80%" placeholder="Add multiple image links here.">
-            </textarea>
-          </div>
-        <p class="help-block">help</p>
-      </div>
-      
+
+    
+    <!-- END OF ADD IMAGE LINKS section -->
+    </fieldset>
+    </form>
+    </div>      
+        
       <!-- CURRENT IMAGES SECTION -->
       <div class="col-sm-6">
         <legend>Current images</legend>
@@ -75,6 +90,7 @@
             <option value="3">Option 3</option>
           </select>    
       <p>Total icon count:</p>
+          
       </div>
       
 <!-- END OF UPLOAD SECTION -->
@@ -121,11 +137,11 @@
       <label class="col-md-4 control-label" for="radios">Table alignment</label>
       <div class="col-md-6"> 
         <label class="radio-inline" for="radios-0">
-          <input type="radio" name="radios" id="radios-0" value="left" checked="checked">
+          <input type="radio" name="radios" id="radios-0" value="left">
           Left
         </label> 
         <label class="radio-inline" for="radios-1">
-          <input type="radio" name="radios" id="radios-1" value="center">
+          <input type="radio" name="radios" id="radios-1" value="center" checked="checked">
           Center
         </label> 
         <label class="radio-inline" for="radios-2">
@@ -214,14 +230,14 @@
     
       <!-- Number font size dropdown menu -->
     <div class="form-group">
-      <label class="col-md-4 control-label" for="numberSize">Number size</label>
-  
+        <label class="col-md-4 control-label" for="numberSize">Number size</label>
         <div class="col-md-4">
         <select id="numberSize" name="numberSize" class="form-control">
           <option value="small">Small</option>
           <option value="normal">Normal</option>
           <option value="big">Big</option>
         </select>
+            
         </div>
       </div>
     
@@ -251,8 +267,8 @@
 <div class="container">
     <center>
       <h2>Get your code</h2>
-      <button type="button" class="btn">
-        <span class="glyphicon glyphicon-copy"></span> Copy to clipboard
+      <button type="button" class="btn btn-primary">
+        Copy to clipboard <span class="glyphicon glyphicon-copy"></span>
       </button> <br><br>
       <textarea rows="10" cols="100">PLACEHOLDER PLACEHOLDER PLACEHOLDER</textarea>
     </center>
