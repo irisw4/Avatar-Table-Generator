@@ -7,6 +7,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="main.js"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
@@ -18,7 +19,7 @@
   <body>
 
     <div class="container-fluid text-center header-section">
-    <h1>ICON TABLE GENERATOR</h1>
+      <h1>ICON TABLE GENERATOR</h1>
 
       <p><small>by irisu</small></p>
 
@@ -35,6 +36,7 @@
 
     <div class="container-fluid upload-section">
       <div class="row">
+
         <!-- ADD IMAGE LINKS SECTION -->
         <div class="col-sm-6 upload-section-left">
           <form class="form-horizontal">
@@ -50,7 +52,7 @@
                   <div class="input-group">
                     <input id="singleImageURL" name="singleImageURL" class="form-control" placeholder="Direct link to image" type="text">
                     <span class="input-group-btn">
-                    <button class="btn btn-primary" type="button">
+                    <button class="btn btn-primary" type="button" onclick="addSingleLink()">
                         <span class="glyphicon glyphicon-plus"></span> Add link
                     </button>
                     </span>
@@ -128,8 +130,7 @@
 
               </div>
 
-              <div class="col-md-4">
-                <p>Total icon count:</p>
+              <div class="col-md-4 control-label"><b>Total icon count:</b></label>
               </div>
 
               <!-- END OF CURRENT IMAGES SECTION -->
@@ -160,6 +161,24 @@
                 <label class="col-md-4 control-label" for="tableBGColor">Table background color</label>
                 <div class="col-md-5">
                   <input id="tableBGColor" name="tableBGColor" type="text" placeholder="#000000 (optional)" class="form-control input-md">
+
+                </div>
+              </div>
+
+              <!-- Table border color input field -->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="tableBorderColor">Table border color</label>
+                <div class="col-md-5">
+                  <input id="tableBorderColor" name="tableBorderColor" type="text" placeholder="#000000 (optional)" class="form-control input-md">
+
+                </div>
+              </div>
+
+              <!-- Table border thickness input field -->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="tableBorderThickness">Table border thickness</label>
+                <div class="col-md-5">
+                  <input id="tableBorderColor" name="tableBorderThickness" type="text" placeholder="0px (optional)" class="form-control input-md">
 
                 </div>
               </div>
@@ -198,13 +217,29 @@
                 </div>
               </div>
 
+              <!-- Table header section -->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="tableHeader">Table header (optional)</label>
+                <div class="col-md-8">
+                  <textarea class="form-control" id="tableHeader" name="tableHeader" placeholder="Insert your table header here, if you want one."></textarea>
+                </div>
+              </div>
+
+              <!-- Table footer section -->
+              <div class="form-group">
+                <label class="col-md-4 control-label" for="tableFooter">Table footer (optional)</label>
+                <div class="col-md-8">
+                  <textarea class="form-control" id="tableFooter" name="tableHeader" placeholder="Insert your table footer here, if you want one."></textarea>
+                </div>
+              </div>
+
               <!-- END OF TABLE STYLING SECTION -->
             </fieldset>
           </form>
         </div>
 
 
-        <!-- CELL STYLING section -->
+        <!-- NUMBERING section -->
         <div class="col-sm-6 customize-section-right">
           <form class="form-horizontal">
             <fieldset>
@@ -213,7 +248,7 @@
 
               <!-- Cell background color input field -->
               <div class="form-group">
-                <label class="col-md-4 control-label" for="cellBGColor">Background color</label>
+                <label class="col-md-4 control-label" for="cellBGColor">Number background color</label>
                 <div class="col-md-3">
                   <input id="cellBGColor" name="cellBGColor" type="text" placeholder="#ffffff" class="form-control input-md">
 
@@ -223,7 +258,7 @@
               <!-- Text before number input field -->
               <div class="form-group">
                 <label class="col-md-4 control-label" for="optionalPrefix">Text before number</label>
-                <div class="col-md-4">
+                <div class="col-md-5">
                   <input id="textinput" name="textinput" type="text" placeholder="Picture, Icon, #, etc." class="form-control input-md">
 
                 </div>
@@ -291,13 +326,13 @@
                 </div>
               </div>
 
-              <!-- END of CELL STYLING section -->
+              <!-- END of NUMBERING section -->
             </fieldset>
           </form>
         </div>
-
-        <!-- END of CUSTOMIZE section -->
       </div>
+
+      <!-- END of CUSTOMIZE section -->
     </div>
 
     <!-- LIVE PREVIEW section -->
@@ -323,7 +358,8 @@
         </button>
         <br>
         <br>
-        <textarea rows="7" cols="100">PLACEHOLDER PLACEHOLDER PLACEHOLDER</textarea>
+        <textarea rows="7" cols="100">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</textarea>
       </center>
     </div>
 
