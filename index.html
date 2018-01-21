@@ -78,12 +78,12 @@
 						
 						<!-- Add multiple images input field -->
 						<div class="form-group">
-							<label class="col-md-4 control-label" for="multipleImageURLs">Add multiple images</label>
+								<label class="col-md-4 control-label" for="multipleImageURLs">Add multiple images</label>
 
-							<div class="col-md-8">
-								<textarea class="form-control" id="multipleImageURLs" name="multipleImageURLs" placeholder="Add multiple image links here."></textarea><br>
-								<button class="btn btn-primary" id="addMultiLinksButton" type="button"><span class="glyphicon glyphicon-plus"></span> Add multiple links</button>
-							</div>
+								<div class="col-md-8 text-right">
+									<textarea class="form-control" rows="4" id="multipleImageURLs" name="multipleImageURLs" placeholder="Add multiple image links here. SEPARATE THE LINKS WITH SEMICOLONS (;)."></textarea><br>
+									<button class="btn btn-primary" id="addMultiLinksButton" type="button"><span class="glyphicon glyphicon-plus"></span> Add multiple links</button>
+								</div>
 						</div>
 						
 						<!-- END OF ADD IMAGE LINKS section -->
@@ -96,22 +96,26 @@
 				<form class="form-horizontal">
 					<fieldset>
 						<legend>Manage images</legend>
+						
+						<!-- Total icon count -->
+						<div class="row">
+							<div class="col-md-4 text-right">
+								<b>Total icon count:</b>
+							</div>
 
+							<div class="col-md-4 text-left">
+								<p><span class="badge" id="imageCounter">5</span></p>
+							</div>
+						</div>	
+						
+						<!-- Currently added images selection list -->
 						<div class="form-group">
 							<label class="col-md-4 control-label" for="currentImages">Currently added images</label>
 
 							<div class="col-md-6">
-								<select class="form-control" id="currentImages" multiple="multiple" name="currentImages" size="7">
-									<option value="1">
-										Option one
-									</option>
-
-									<option value="2">
-										Option two
-									</option>
+								<select class="form-control" id="currentImages" multiple="multiple" name="currentImages" size="10">
 								</select>
 							</div>
-
 
 							<div class="col-sm-2">
 								<button class="btn btn-primary" id="moveUpButton" type="button" value="moveUp"><span class="glyphicon glyphicon-arrow-up"></span></button><br>
@@ -120,11 +124,6 @@
 								<br>
 								<button class="btn btn-primary" id="removeButton" type="button"><span class="glyphicon glyphicon-remove"></span></button>
 							</div>
-						</div>
-						
-						<!-- Add icon count -->
-						<div class="col-md-4 control-label">
-							<b>Total icon count:</b>
 						</div>
                         
 						<!-- END OF CURRENT IMAGES SECTION -->
@@ -152,10 +151,10 @@
 						
 						<!-- Table background color input field -->
 						<div class="form-group">
-							<label class="col-md-4 control-label" for="tableBGColor">Table background color</label>
+							<label class="col-md-4 control-label" for="tableBGColorField">Table background color</label>
 
 							<div class="col-md-5">
-								<input class="form-control input-md" id="tableBGColor" name="tableBGColor" placeholder="#000000 (optional)" type="text">
+								<input class="form-control input-md" id="tableBGColorField" name="tableBGColorField" placeholder="#000000 (optional)" type="text">
 							</div>
 						</div>
 						
@@ -189,7 +188,7 @@
 									<option value="1">1</option>
 									<option value="2">2</option>
 									<option value="3">3</option>
-									<option value="4">4</option>
+									<option value="4" selected>4</option>
 									<option value="5">5</option>
 									<option value="6">6</option>
 									<option value="7">7</option>
@@ -197,20 +196,25 @@
 							</div>
 						</div>
 						
-						<!-- Table alignment radio buttons -->
+						<!-- Table alignment section -->
 						<div class="form-group">
-							<label class="col-md-4 control-label" for="radios">Table alignment</label>
+							<label class="col-md-4 control-label">Table alignment</label>
 
-							<div class="col-md-6">
-								<label class="radio-inline" for="radios-0">
-                                    <input id="radios-0" name="radios" type="radio" value="left"> Left
-                                </label> 
-                                <label class="radio-inline" for="radios-1">
-                                    <input checked="checked" id="radios-1" name="radios" type="radio" value="center"> Center
-                                </label> 
-                                <label class="radio-inline" for="radios-2">
-                                    <input id="radios-2" name="radios" type="radio" value="right"> Right
-                                </label>
+							<div class="col-md-6 btn-group" id="tableAlignmentButtons">
+								
+								<label class="radio-inline">
+								  <input type="radio" name="tableAlignmentButtons" value="left"> 
+									<span class="glyphicon glyphicon-align-left"></span> Left
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="tableAlignmentButtons" value="center" checked="checked">
+									<span class="glyphicon glyphicon-align-center"></span> Center
+								</label>
+								<label class="radio-inline">
+								  <input type="radio" name="tableAlignmentButtons" value="right">
+									Right <span class="glyphicon glyphicon-align-right"></span>
+								</label>
+							
 							</div>
 						</div>
 						
@@ -219,7 +223,7 @@
 							<label class="col-md-4 control-label" for="tableHeader">Table header (optional)</label>
 
 							<div class="col-md-8">
-								<textarea class="form-control" id="tableHeader" name="tableHeader" placeholder="Insert your table header here, if you want one."></textarea>
+								<textarea class="form-control" id="tableHeader" name="tableHeader" placeholder="Insert your table header here, if you want one. Raw HTML only."></textarea>
 							</div>
 						</div>
 						
@@ -228,7 +232,7 @@
 							<label class="col-md-4 control-label" for="tableFooter">Table footer (optional)</label>
 
 							<div class="col-md-8">
-								<textarea class="form-control" id="tableFooter" name="tableHeader" placeholder="Insert your table footer here, if you want one."></textarea>
+								<textarea class="form-control" id="tableFooter" name="tableHeader" placeholder="Insert your table footer here, if you want one. Raw HTML only."></textarea>
 							</div>
 						</div>
 						
@@ -257,7 +261,7 @@
 							<label class="col-md-4 control-label" for="optionalPrefix">Text before number</label>
 
 							<div class="col-md-5">
-								<input class="form-control input-md" id="textinput" name="textinput" placeholder="Picture, Icon, #, etc." type="text">
+								<input class="form-control input-md" id="optionalPrefix" name="optionalPrefix" placeholder="Picture, Icon, #, etc." type="text">
 							</div>
 						</div>
 						
@@ -266,7 +270,7 @@
 							<label class="col-md-4 control-label" for="startNumber">Number to start from</label>
 
 							<div class="col-md-2">
-								<input class="form-control input-md" id="startNumber" name="startNumber" placeholder="000" type="text">
+								<input class="form-control input-md" id="startNumberField" name="startNumberField" placeholder="1" type="text">
 							</div>
 						</div>
 						
@@ -276,32 +280,26 @@
 
 							<div class="col-md-6">
 								<div class="radio">
-									<label for="radios-0"><input checked="checked" id="radios-0" name="radios" type="radio" value="none"> No numbers</label>
+									<label for="radios-0"><input id="radios-0" name="radios" type="radio" value="none"> No numbers</label>
 								</div>
-
 
 								<div class="radio">
-									<label for="radios-1"><input id="radios-1" name="radios" type="radio" value="above"> Above icon</label>
+									<label for="radios-1"><input id="radios-1" name="radios" type="radio" value="above" checked="checked"> Above image</label>
 								</div>
-
 
 								<div class="radio">
-									<label for="radios-2"><input id="radios-2" name="radios" type="radio" value="under"> Under icon</label>
+									<label for="radios-2"><input id="radios-2" name="radios" type="radio" value="under"> Under image</label>
 								</div>
-
-
-								<div class="radio">
-									<label for="radios-3"><input id="radios-3" name="radios" type="radio" value="left"> Left of icon</label>
-								</div>
+								
 							</div>
 						</div>
 						
 						<!-- Number font size dropdown menu -->
 						<div class="form-group">
-							<label class="col-md-4 control-label" for="numberSize">Number size</label>
+							<label class="col-md-4 control-label" for="numberSizeField">Number size</label>
 
 							<div class="col-md-3">
-								<select class="form-control" id="numberSize" name="numberSize">
+								<select class="form-control" id="numberSizeField" name="numberSizeField">
 									<option value="small">Small</option>
 
 									<option value="normal">Normal</option>
@@ -313,10 +311,10 @@
 						
 						<!-- Number font color input field -->
 						<div class="form-group">
-							<label class="col-md-4 control-label" for="numberColor">Number font color</label>
+							<label class="col-md-4 control-label" for="numberColorField">Number font color</label>
 
 							<div class="col-md-3">
-								<input class="form-control input-md" id="numberColor" name="numberColor" placeholder="#000000" type="text">
+								<input class="form-control input-md" id="numberColorField" name="numberColorField" placeholder="#000000" type="text">
 							</div>
 						</div>
 						
@@ -336,7 +334,7 @@
 
 
 	<div class="container-fluid preview-section">
-		<p>placeholder preview text</p>
+		<p id="previewOutput"></p>
 	</div>
 	
 	<!-- COPY YOUR CODE section -->
@@ -349,8 +347,7 @@
 			<button class="btn btn-primary" type="button">Copy to clipboard <span class="glyphicon glyphicon-copy"></span></button><br>
 			<br>
 
-			<textarea cols="100" rows="7">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</textarea>
+			<textarea cols="100" rows="7" id="outputTextarea"></textarea>
 		</center>
 	</div>
 </body>
