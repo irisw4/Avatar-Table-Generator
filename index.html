@@ -11,6 +11,7 @@
 	</script>
 	<script src="functions.js">
 	</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.AreYouSure/1.9.0/jquery.are-you-sure.min.js"></script>
 	
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 	<link href="style.css" rel="stylesheet">
@@ -44,7 +45,7 @@
 					<fieldset>
 						<legend>Add image links</legend> 
                         
-                        <!-- Add images 1-by-1 input field -->
+            <!-- Add images 1-by-1 input field -->
 						<div class="form-group">
 							<label class="col-md-4 control-label" for="singleImageURL">Add images 1-by-1</label>
 
@@ -148,38 +149,8 @@
 				<form class="form-horizontal">
 					<fieldset>
 						<legend>Table styling</legend> 
-						
-						<!-- Table background color input field -->
-						<div class="form-group">
-							<label class="col-md-4 control-label" for="tableBGColorField">Table background color</label>
-
-							<div class="col-md-5">
-								<input class="form-control input-md" id="tableBGColorField" name="tableBGColorField" placeholder="#000000 (optional)" type="text">
-							</div>
-						</div>
-						
-						<!-- Table border color input field -->
-						<div class="form-group">
-							<label class="col-md-4 control-label" for="tableBorderColor">Table border color</label>
-
-							<div class="col-md-5">
-								<input class="form-control input-md" id="tableBorderColor" name="tableBorderColor" placeholder="#000000 (optional)" type="text">
-							</div>
-						</div>
-						
-						<!-- Table border thickness input field -->
-						<div class="form-group">
-							<label class="col-md-4 control-label" for="tableBorderThickness">Table border thickness</label>
-
-							<div class="col-md-3">
-                                <div class="input-group">
-                                    <input id="tableBorderThickness" name="tableBorderThickness" class="form-control" placeholder="0" type="text">
-                                    <span class="input-group-addon">px</span>
-                                </div>
-							</div>
-						</div>
-						
-						<!-- Images per row input dropdown menu -->
+            
+            <!-- Images per row input dropdown menu -->
 						<div class="form-group">
 							<label class="col-md-4 control-label" for="imagesPerRow">Images per row</label>
 
@@ -195,12 +166,12 @@
 								</select>
 							</div>
 						</div>
-						
-						<!-- Table alignment section -->
+            
+            <!-- Table alignment section -->
 						<div class="form-group">
 							<label class="col-md-4 control-label">Table alignment</label>
 
-							<div class="col-md-6 btn-group" id="tableAlignmentButtons">
+							<div class="col-md-8 btn-group" id="tableAlignmentButtons">
 								
 								<label class="radio-inline">
 								  <input type="radio" name="tableAlignmentButtons" value="left"> 
@@ -218,6 +189,36 @@
 							</div>
 						</div>
 						
+						<!-- Table background color input field -->
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="tableBGColorField">Table background color</label>
+
+							<div class="col-md-5">
+								<input class="form-control input-md" id="tableBGColorField" name="tableBGColorField" placeholder="#000000 (optional)" type="text">
+							</div>
+						</div>
+						
+						<!-- Table border color input field 
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="tableBorderColor">Table border color</label>
+
+							<div class="col-md-5">
+								<input class="form-control input-md" id="tableBorderColor" name="tableBorderColor" placeholder="#000000 (optional)" type="text">
+							</div>
+						</div>-->
+						
+						<!-- Table border thickness input field 
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="tableBorderThickness">Table border thickness</label>
+
+							<div class="col-md-3">
+                                <div class="input-group">
+                                    <input id="tableBorderThickness" name="tableBorderThickness" class="form-control" placeholder="0" type="text">
+                                    <span class="input-group-addon">px</span>
+                                </div>
+							</div>
+						</div>-->
+						
 						<!-- Table header section -->
 						<div class="form-group">
 							<label class="col-md-4 control-label" for="tableHeader">Table header (optional)</label>
@@ -227,14 +228,14 @@
 							</div>
 						</div>
 						
-						<!-- Table footer section -->
+						<!-- Table footer section 
 						<div class="form-group">
 							<label class="col-md-4 control-label" for="tableFooter">Table footer (optional)</label>
 
 							<div class="col-md-8">
 								<textarea class="form-control" id="tableFooter" name="tableHeader" placeholder="Insert your table footer here, if you want one. Raw HTML only."></textarea>
 							</div>
-						</div>
+						</div>-->
 						
 						<!-- END OF TABLE STYLING SECTION -->
 					</fieldset>
@@ -246,26 +247,8 @@
 				<form class="form-horizontal">
 					<fieldset>
 						<legend>Numbering</legend> 
-						
-						<!-- Cell background color input field -->
-						<div class="form-group">
-							<label class="col-md-4 control-label" for="cellBGColor">Number background color</label>
-
-							<div class="col-md-3">
-								<input class="form-control input-md" id="cellBGColor" name="cellBGColor" placeholder="#ffffff" type="text">
-							</div>
-						</div>
-						
-						<!-- Text before number input field -->
-						<div class="form-group">
-							<label class="col-md-4 control-label" for="optionalPrefix">Text before number</label>
-
-							<div class="col-md-5">
-								<input class="form-control input-md" id="optionalPrefix" name="optionalPrefix" placeholder="Picture, Icon, #, etc." type="text">
-							</div>
-						</div>
-						
-						<!-- Number to start from input field -->
+            
+            <!-- Number to start from input field -->
 						<div class="form-group">
 							<label class="col-md-4 control-label" for="startNumber">Number to start from</label>
 
@@ -273,8 +256,8 @@
 								<input class="form-control input-md" id="startNumberField" name="startNumberField" value="1" type="text">
 							</div>
 						</div>
-						
-						<!-- Number position radio buttons -->
+            
+            <!-- Number position radio buttons -->
 						<div class="form-group">
 							<label class="col-md-4 control-label" for="radios">Number position</label>
 
@@ -293,8 +276,8 @@
 								
 							</div>
 						</div>
-						
-						<!-- Number font size dropdown menu -->
+            
+            <!-- Number font size dropdown menu -->
 						<div class="form-group">
 							<label class="col-md-4 control-label" for="numberSizeField">Number size</label>
 
@@ -308,13 +291,31 @@
 								</select>
 							</div>
 						</div>
-						
-						<!-- Number font color input field -->
+            
+            <!-- Number font color input field -->
 						<div class="form-group">
 							<label class="col-md-4 control-label" for="numberColorField">Number font color</label>
 
 							<div class="col-md-3">
 								<input class="form-control input-md" id="numberColorField" name="numberColorField" placeholder="#000000" type="text">
+							</div>
+						</div>
+						
+						<!-- Number cell background color input field -->
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="cellBGColor">Number background color</label>
+
+							<div class="col-md-3">
+								<input class="form-control input-md" id="cellBGColor" name="cellBGColor" placeholder="#ffffff" type="text">
+							</div>
+						</div>
+						
+						<!-- Text before number input field -->
+						<div class="form-group">
+							<label class="col-md-4 control-label" for="optionalPrefix">Text before number</label>
+
+							<div class="col-md-5">
+								<input class="form-control input-md" id="optionalPrefix" name="optionalPrefix" placeholder="Picture, Icon, #, etc." type="text">
 							</div>
 						</div>
 						
