@@ -152,15 +152,19 @@ function imageCountUpdate() {
 	document.getElementById( "imageCounter" ).innerHTML = count;
 }
 
+// Updates the entire table and basically recreates the whole thing whenever it's called.
 function updateTable() {
+	// Variables that pull input information from the fields associated with formatting the numbering.
 	var numSize = $( '#numberSizeField' ).val();
 	var numColor = $( '#numberColorField' ).val();
-
-	//var numStart = $( '#startNumberField' ).val();
-	var numStart = 1;
-
+	var numPrefix = $( '#optionalPrefix' ).val();
+	var numBGColor = $( '#cellBGColor' ).val();
+	var numStart = $( '#startNumberField' ).val();
 	var numPosition = $( 'input[name=np_radios]:checked' ).val();
+  
+  // Variables that pull input information from the fields associated with formatting the overall table.
 	var tableColor = $( '#tableBGColorField' ).val();
+  var tableAlign = $( 'input[name=tableAlignmentButtons]:checked' ).val();
 
 	// Which nth icon in the list the link is, starts from 0 (first icon). 
 	// This is for users making multiple tables, who choose different starting numbers.
@@ -187,7 +191,7 @@ function updateTable() {
 
 		for ( var j = 0; j < numColumns; j++ ) {
 			if ( i * numColumns + j < numIcons ) {
-				numOutput += createNumberCell( numSize, numColor, numStart );
+				numOutput += createNumberCell( numSize, numColor, numStart, numPrefix, numBGColor );
 			}
 
 			numStart++; // Increment the numbering
@@ -230,10 +234,14 @@ function updateTable() {
 
 	// If tableColor exists and is not undefined, insert this piece of code into the table start code.
 	if ( tableColor ) {
-		tableColor = " style=\"background-color: " + tableColor + "\"";
+		tableColor = "background-color: " + tableColor + "; ";
 	}
+  
+  if ( tableAlign ) {
+    tableAlign = "align=\"" + tableAlign;
+  }
 
-	var tableStart = "<table" + tableColor + ">"; // Table start code.
+	var tableStart = "<table style=\"" + tableColor + "\" " + tableAlign + "\">"; // Table start code.
 	var tableEnd = "\n</table>"; // Table end code.
 
 	var fullOutput = tableStart + output + tableEnd; // Puts everything together.
@@ -243,11 +251,8 @@ function updateTable() {
 }
 
 
-// Creates a cell for the numbering. This is called every time you need to make a numbered cell.
-function createNumberCell( numSize, numColor, number ) {
-
-	var prefix = $( '#optionalPrefix' ).val();
-	var bgColor = $( '#cellBGColor' ).val();
+// Creates the HTML code neede for the numbering cell. This is called every time you need to make a numbered cell.
+function createNumberCell( numSize, numColor, number, prefix, bgColor ) {
 
 	// Inserts or changes the size tags for the numbering.
 	var sizeStart = "";
@@ -268,7 +273,7 @@ function createNumberCell( numSize, numColor, number ) {
 
 	// If numColor (aka the color of the number) is not empty/undefined/etc and actually exists, insert the code for table style.
 	if ( numColor ) {
-		numColor = "color: " + numColor;
+		numColor = "color: " + numColor + "; ";
 	}
 	// If bgcolor (aka the color of the background of this numbering cell) is not empty/undefined/etc and actually exists, insert the code for the bg style.
 	if ( bgColor ){
@@ -276,7 +281,7 @@ function createNumberCell( numSize, numColor, number ) {
 	}
 
 	// Total output.
-	return ( "\n<td style=\"" + numColor + "; " + bgColor + "text-align: center;\">" + sizeStart + prefix + number + sizeEnd + "</td>" );
+	return ( "\n<td style=\"" + numColor + bgColor + "text-align: center;\">" + sizeStart + prefix + number + sizeEnd + "</td>" );
 
 }
 
