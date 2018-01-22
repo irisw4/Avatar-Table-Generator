@@ -270,7 +270,7 @@
 							<label class="col-md-4 control-label" for="startNumber">Number to start from</label>
 
 							<div class="col-md-2">
-								<input class="form-control input-md" id="startNumberField" name="startNumberField" placeholder="1" type="text">
+								<input class="form-control input-md" id="startNumberField" name="startNumberField" value="1" type="text">
 							</div>
 						</div>
 						
@@ -280,15 +280,15 @@
 
 							<div class="col-md-6">
 								<div class="radio">
-									<label for="radios-0"><input id="radios-0" name="radios" type="radio" value="none"> No numbers</label>
+									<label for="radios-0"><input id="radios-0" name="np_radios" type="radio" value="above" checked="checked"> Above image</label>
 								</div>
 
 								<div class="radio">
-									<label for="radios-1"><input id="radios-1" name="radios" type="radio" value="above" checked="checked"> Above image</label>
+									<label for="radios-1"><input id="radios-1" name="np_radios" type="radio" value="none"> No numbers</label>
 								</div>
 
 								<div class="radio">
-									<label for="radios-2"><input id="radios-2" name="radios" type="radio" value="under"> Under image</label>
+									<label for="radios-2"><input id="radios-2" name="np_radios" type="radio" value="under"> Under image</label>
 								</div>
 								
 							</div>
@@ -344,10 +344,10 @@
 
 	<div class="container-fluid copy-section">
 		<center>
-			<button class="btn btn-primary" type="button">Copy to clipboard <span class="glyphicon glyphicon-copy"></span></button><br>
+			<button class="btn btn-primary" type="button" id="copyButton" onclick="copyToClipboard()">Copy to clipboard <span class="glyphicon glyphicon-copy"></span></button><br>
 			<br>
 
-			<textarea cols="100" rows="7" id="outputTextarea"></textarea>
+			<textarea cols="100" rows="7" id="outputTextarea" placeholder="After generating your table, pick up your code here."></textarea>
 		</center>
 	</div>
 </body>
