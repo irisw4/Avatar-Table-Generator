@@ -5,6 +5,8 @@ Uses HTML, CSS, and Javascript. Currently using Bootstrap for the sake of respon
 
 ### Why don't you just use the existing icon table generators?
 http://scripts.accio.nu/icons.php:
+- Doesn't include the img src tags anymore so it's just a bunch of links; doesn't work
+
 http://icontable.morning-songs.com/:
 - Can't rearrange icons in table easily
 - No formatting for number cells
@@ -14,10 +16,10 @@ silvinscorner.awardspace.com/icontable/:
 
 
 http://lj.indisguise.org/icontablegenerator.php:
-- Doesn't include the img-src tags anymore so it's just a bunch of links; doesn't work
+- Doesn't include the img src tags anymore so it's just a bunch of links; doesn't work
 
 http://bamf.edgeofmars.net/scripts/icontable.php:
-- Doesn't include the img-src tags anymore so it's just a bunch of links; doesn't work
+- Doesn't include the img src tags anymore so it's just a bunch of links; doesn't work
 
 http://malionette.net/generator/icontable/:
 - Website is just straight-up gone (probably due to age/domain expiring), page is down and probably not coming back up.
