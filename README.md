@@ -6,6 +6,7 @@ Uses HTML, CSS, and Javascript. Currently using Bootstrap for the sake of respon
 ### Why don't you just use the existing icon table generators?
 http://scripts.accio.nu/icons.php:
 - Doesn't include the img src tags anymore so it's just a bunch of links; doesn't work
+- Can't rearrange image order easily
 
 http://icontable.morning-songs.com/:
 - Can't rearrange icons in table easily
