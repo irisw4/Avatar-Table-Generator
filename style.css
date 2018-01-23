@@ -31,8 +31,8 @@ p {}
 }
 
 .container-fluid {
-  padding-top: 20px;
-  padding-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 
 .header-section {
@@ -64,11 +64,11 @@ p {}
 .customize-section-right {}
 
 .preview-header {
-  background-color: #FFE082;
+  background-color: #E0E0E0;
 }
 
 .preview-section {
-  background-color: #FFECB3;
+  background-color: #EEEEEE;
 }
 
 .copy-header {
