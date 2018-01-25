@@ -2,6 +2,11 @@ $(document).ready(function() {
 
   imageCountUpdate();
 
+  // Clicking the Copy to clipboard button in the GET YOUR CODE section copies the text in the textarea (outputTextarea) to the clipboard.
+  $('#copyButton').on('click', function() {
+    copyToClipboard();
+  })
+
   // Clicking the + Add link button on the side of the "Add images 1-by-1" input field adds the link to the 'Currently added images' list (currentImages) on the right. 
   $('#addLinkButton').on('click', function(e) {
     var link = $('#singleImageURL').val();
@@ -56,6 +61,7 @@ $(document).ready(function() {
     if (link.includes("imgur.com/a/")) { // If the input field does not start with 'https://imgur.com/a/', then it's not an Imgur album...probably.
       requestAlbumImages(link);
       imageCountUpdate();
+      updateTable(); // Updates table in preview section.
 
       $('#imgurAlbumURL').val(''); // Resets the input field. Might take out later? Ask for feedback.
 
