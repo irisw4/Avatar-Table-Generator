@@ -25,7 +25,7 @@ http://bamf.edgeofmars.net/scripts/icontable.php:
 http://malionette.net/generator/icontable/:
 - Website is just straight-up gone (probably due to age/domain expiring), page is down and probably not coming back up.
 
-Also, this one can grab images directly from Imgur albums using their API, for ezpz bulk uploading. The GET request limit for the Imgur API is apparently 12,500 requests per day, which should be fine unless something like more than 125 people deciding to upload 100 icons or more via Imgur in a single day happens.
+Also, this one can grab images directly from Imgur albums using their API, for ezpz bulk uploading. The GET request limit for the Imgur API is apparently 12,500 requests per day, which should be fine unless something like more than 125 people deciding to upload 100 albums or more via Imgur in a single day happens.
 
 Let me know if there are any features you think I should include.
 
