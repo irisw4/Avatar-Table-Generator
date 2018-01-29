@@ -90,8 +90,13 @@ $(document).ready(function() {
     }
   });
 
+  // Updates table (runs updateTable) on any radio button change.
+  $(":radio").change(function() {
+    updateTable();
+  });
+
   // Updates table (runs updateTable) on any form input change.
-  $("form :input").change(function() {
+  $(":input").change(function() {
     updateTable();
   });
 
@@ -243,10 +248,7 @@ function updateTable() {
     }
   }
 
-  // Take care of the straggling, last incomplete row.
-  // If it is an incomplete row, stop the numbering and cell-making at that point.
 
-  // This is the end output. The two fields below are basically the same thing, just that one is the raw code and the other is the HTML code put into action.	
 
   // If tableColor exists and is not undefined, insert this piece of code into the table start code.
   if (tableColor) {
@@ -264,6 +266,8 @@ function updateTable() {
   if (tableHeader) {
     tableHeader = "\n<tr><th colspan=\"" + numColumns + "\">" + tableHeader + "</th></tr>";
   }
+
+  // This is the end output. The two fields below are basically the same thing, just that one is the raw code and the other is the HTML code put into action.	
 
   var tableStart = "<table style=\"" + tableCellSpacing + tableColor + "\" " + tableAlign + "\">"; // Table start code.
   var tableEnd = "\n</table>"; // Table end code.
